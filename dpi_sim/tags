@@ -1,0 +1,828 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTIVE_LIST_SIZE	parameters.cc	/^uint32_t ACTIVE_LIST_SIZE	= 256;$/;"	v
+ACTIVE_SIZE	debug.h	/^	unsigned int ACTIVE_SIZE;$/;"	m	class:debug_buffer_t
+AL	renamer.h	/^	active_list_t* AL;$/;"	m	class:renamer
+AL_index_fp	payload.h	/^	unsigned int AL_index_fp;	\/\/ Index into floating-point Active List.$/;"	m	struct:__anon9
+AL_index_int	payload.h	/^	unsigned int AL_index_int;	\/\/ Index into integer Active List.$/;"	m	struct:__anon9
+AMT	renamer.h	/^	unsigned int* AMT;$/;"	m	class:renamer
+A_int	payload.h	/^	bool A_int;			$/;"	m	struct:__anon9
+A_log_reg	payload.h	/^	unsigned int A_log_reg;	$/;"	m	struct:__anon9
+A_phys_reg	payload.h	/^	unsigned int A_phys_reg;	\/\/ If there exists a first source register (A),$/;"	m	struct:__anon9
+A_ready	issue_queue.h	/^	bool A_ready;		\/\/ ready bit (operand is ready)$/;"	m	struct:__anon6
+A_tag	issue_queue.h	/^	unsigned int A_tag;	\/\/ physical register name$/;"	m	struct:__anon6
+A_valid	issue_queue.h	/^	bool A_valid;		\/\/ valid bit (operand exists)$/;"	m	struct:__anon6
+A_valid	payload.h	/^	bool A_valid;		$/;"	m	struct:__anon9
+A_value	payload.h	/^	union64_t A_value;		\/\/ If there exists a first source register (A),$/;"	m	struct:__anon9
+Access	dcache.cc	/^cycle_t CacheClass::Access(unsigned int Tid \/* ER 11\/16\/02 *\/,$/;"	f	class:CacheClass
+Accesses	dcache.h	/^	inline int Accesses(bool isStore) {$/;"	f	class:CacheClass
+Add	histogram.cc	/^void HistogramClass::Add(int bin, int amount)$/;"	f	class:HistogramClass
+Average	histogram.cc	/^double HistogramClass::Average()$/;"	f	class:HistogramClass
+BIT_IS_ONE	pipeline.h	76;"	d
+BIT_IS_ZERO	pipeline.h	75;"	d
+BP	pipeline.h	/^	bpred_interface BP;		\/\/ Branch predictor.$/;"	m	class:pipeline_t
+BPRED_INTERFACE_H	bpred_interface.h	2;"	d
+BTB	bpred_interface.h	/^	BpredPredictAutomaton*	BTB;$/;"	m	class:bpred_interface
+BTB_MASK	bpred_interface.h	28;"	d
+BTB_SIZE	bpred_interface.h	27;"	d
+B_int	payload.h	/^	bool B_int;			$/;"	m	struct:__anon9
+B_log_reg	payload.h	/^	unsigned int B_log_reg;	$/;"	m	struct:__anon9
+B_phys_reg	payload.h	/^	unsigned int B_phys_reg;	\/\/ If there exists a second source register (B),$/;"	m	struct:__anon9
+B_ready	issue_queue.h	/^	bool B_ready;		\/\/ ready bit (operand is ready)$/;"	m	struct:__anon6
+B_tag	issue_queue.h	/^	unsigned int B_tag;	\/\/ physical register name$/;"	m	struct:__anon6
+B_valid	issue_queue.h	/^	bool B_valid;		\/\/ valid bit (operand exists)$/;"	m	struct:__anon6
+B_valid	payload.h	/^	bool B_valid;		$/;"	m	struct:__anon9
+B_value	payload.h	/^	union64_t B_value;		\/\/ If there exists a second source register (B),$/;"	m	struct:__anon9
+Bin	histogram.cc	/^int HistogramClass::Bin(int bin)$/;"	f	class:HistogramClass
+BpredPredictAutomaton	bpred_interface.h	/^	BpredPredictAutomaton()$/;"	f	class:BpredPredictAutomaton
+BpredPredictAutomaton	bpred_interface.h	/^class BpredPredictAutomaton$/;"	c
+C	cache.h	/^	entry**	C;$/;"	m	class:cache
+CACHE_H	cache.h	2;"	d
+CLEAR_BIT	pipeline.h	78;"	d
+CONF_MAX	parameters.cc	/^unsigned int CONF_MAX               = 15;$/;"	v
+CONF_RESET	parameters.cc	/^bool CONF_RESET                     = true;$/;"	v
+CONF_THRESHOLD	parameters.cc	/^unsigned int CONF_THRESHOLD         = 14;$/;"	v
+CSR_addr	payload.h	/^  uint64_t CSR_addr;$/;"	m	struct:__anon9
+CSR_new_value	payload.h	/^  uint64_t CSR_new_value;$/;"	m	struct:__anon9
+CSR_old_value	payload.h	/^  uint64_t CSR_old_value;$/;"	m	struct:__anon9
+CTI_entry_b	bpred_interface.h	/^class CTI_entry_b$/;"	c
+C_int	payload.h	/^	bool C_int;			$/;"	m	struct:__anon9
+C_log_reg	payload.h	/^	unsigned int C_log_reg;	$/;"	m	struct:__anon9
+C_phys_reg	payload.h	/^	unsigned int C_phys_reg;	\/\/ If there exists a destination register (C),$/;"	m	struct:__anon9
+C_valid	payload.h	/^	bool C_valid;		$/;"	m	struct:__anon9
+C_value	payload.h	/^	union64_t C_value;		$/;"	m	struct:__anon9
+CacheArray	dcache.h	/^typedef cache<CacheLineClass> CacheArray;$/;"	t
+CacheClass	dcache.cc	/^CacheClass::CacheClass(int sets, int assoc, int lineSize,$/;"	f	class:CacheClass
+CacheClass	dcache.h	/^class CacheClass {$/;"	c
+CacheLineClass	dcache.h	/^class CacheLineClass {$/;"	c
+Clear	histogram.cc	/^void HistogramClass::Clear()$/;"	f	class:HistogramClass
+DC	lsu.h	/^	CacheClass* DC;$/;"	m	class:lsu
+DCACHE_H	dcache.h	2;"	d
+DEBUG_H	debug.h	2;"	d
+DEBUG_INDEX_INVALID	debug.h	20;"	d
+DEBUG_MMU	sim.h	12;"	d
+DEBUG_SIZE	debug.h	/^	unsigned int DEBUG_SIZE;$/;"	m	class:debug_buffer_t
+DECLARE_COUNTER	stats.h	17;"	d
+DECLARE_RATE	stats.h	23;"	d
+DECODE	pipeline.h	/^	pipeline_register* DECODE;$/;"	m	class:pipeline_t
+DEST	pipeline.h	85;"	d
+DISPATCH	pipeline.h	/^	pipeline_register* DISPATCH;$/;"	m	class:pipeline_t
+DISPATCH_WIDTH	parameters.cc	/^uint32_t DISPATCH_WIDTH	  = 8;\/\/2;\/\/4;$/;"	v
+DPI_DLLESPEC	svdpi.h	45;"	d
+DPI_DLLESPEC	svdpi.h	499;"	d
+DPI_DLLESPEC	svdpi.h	50;"	d
+DPI_DLLISPEC	svdpi.h	33;"	d
+DPI_DLLISPEC	svdpi.h	38;"	d
+DPI_DLLISPEC	svdpi.h	494;"	d
+DPI_EXTERN	svdpi.h	490;"	d
+DPI_EXTERN	svdpi.h	56;"	d
+DPI_PROTOTYPES	svdpi.h	503;"	d
+DPI_PROTOTYPES	svdpi.h	60;"	d
+DPI_USER_DEFINED_DLLESPEC	svdpi.h	46;"	d
+DPI_USER_DEFINED_DLLESPEC	svdpi.h	498;"	d
+DPI_USER_DEFINED_DLLISPEC	svdpi.h	34;"	d
+DPI_USER_DEFINED_DLLISPEC	svdpi.h	493;"	d
+D_MAX_RDST	debug.h	17;"	d
+D_MAX_RSRC	debug.h	18;"	d
+D_int	payload.h	/^	bool D_int;			$/;"	m	struct:__anon9
+D_log_reg	payload.h	/^	unsigned int D_log_reg;	$/;"	m	struct:__anon9
+D_phys_reg	payload.h	/^	unsigned int D_phys_reg;	\/\/ If there exists a destination register (C),$/;"	m	struct:__anon9
+D_ready	issue_queue.h	/^	bool D_ready;		\/\/ ready bit (operand is ready)$/;"	m	struct:__anon6
+D_tag	issue_queue.h	/^	unsigned int D_tag;	\/\/ physical register name$/;"	m	struct:__anon6
+D_valid	issue_queue.h	/^	bool D_valid;		\/\/ valid bit (operand exists)$/;"	m	struct:__anon6
+D_valid	payload.h	/^	bool D_valid;		$/;"	m	struct:__anon9
+D_value	payload.h	/^	union64_t D_value;		$/;"	m	struct:__anon9
+EETERN	svdpi.h	505;"	d
+EETERN	svdpi.h	64;"	d
+ExecMULT	alu.cc	/^static void ExecMULT(reg_t op1, reg_t op2,$/;"	f	file:
+ExecMULTU	alu.cc	/^static void ExecMULTU(reg_t rs, reg_t rt,$/;"	f	file:
+ExecSRA	alu.cc	/^static void ExecSRA(reg_t rt, unsigned int shamt, reg_t* rd)$/;"	f	file:
+ExecSRAV	alu.cc	/^ExecSRAV(reg_t rt, reg_t rs, reg_t* rd)$/;"	f	file:
+Execution_Lanes	pipeline.h	/^	lane* Execution_Lanes;$/;"	m	class:pipeline_t
+FETCH_QUEUE_H	fetch_queue.h	2;"	d
+FETCH_QUEUE_SIZE	parameters.cc	/^uint32_t FETCH_QUEUE_SIZE	= 32;$/;"	v
+FETCH_WIDTH	parameters.cc	/^uint32_t FETCH_WIDTH	    = 8;\/\/2;\/\/4;$/;"	v
+FL	renamer.h	/^	unsigned int* FL;$/;"	m	class:renamer
+FM_MAX	parameters.cc	/^unsigned int FM_MAX                 = 15;$/;"	v
+FM_RESET	parameters.cc	/^bool FM_RESET                       = true;$/;"	v
+FM_THRESHOLD	parameters.cc	/^unsigned int FM_THRESHOLD           = 14;$/;"	v
+FP_DEST	pipeline.h	91;"	d
+FP_SOURCE1	pipeline.h	88;"	d
+FP_SOURCE2	pipeline.h	89;"	d
+FP_SOURCE3	pipeline.h	90;"	d
+FQ	pipeline.h	/^	fetch_queue FQ;$/;"	m	class:pipeline_t
+FU_ALU_C	fu.h	/^	FU_ALU_C,	\/\/ function unit for complex integer ALU operations$/;"	e	enum:__anon5
+FU_ALU_FP	fu.h	/^	FU_ALU_FP,	\/\/ function unit for floating-point ALU operations$/;"	e	enum:__anon5
+FU_ALU_S	fu.h	/^	FU_ALU_S,	\/\/ function unit for simple integer ALU operations$/;"	e	enum:__anon5
+FU_BR	fu.h	/^	FU_BR,		\/\/ function unit for branches$/;"	e	enum:__anon5
+FU_H	fu.h	2;"	d
+FU_LANE_MATRIX	parameters.cc	/^uint32_t FU_LANE_MATRIX[(unsigned int)NUMBER_FU_TYPES] = {0xff \/*     BR: 0000 0100 *\/ ,$/;"	v
+FU_LS	fu.h	/^	FU_LS,		\/\/ function unit for integer loads\/stores$/;"	e	enum:__anon5
+FU_LS_FP	fu.h	/^	FU_LS_FP,	\/\/ function unit for floating-point loads\/stores$/;"	e	enum:__anon5
+FU_MTF	fu.h	/^	FU_MTF,		\/\/ function unit for move-to\/move-from floating-point registers$/;"	e	enum:__anon5
+F_AMO	pipeline.h	58;"	d
+F_COND	pipeline.h	48;"	d
+F_CSR	pipeline.h	59;"	d
+F_CTRL	pipeline.h	46;"	d
+F_DIRECT	pipeline.h	54;"	d
+F_DISP	pipeline.h	52;"	d
+F_FCOMP	pipeline.h	45;"	d
+F_FMEM	pipeline.h	57;"	d
+F_ICOMP	pipeline.h	44;"	d
+F_LOAD	pipeline.h	50;"	d
+F_LONGLAT	pipeline.h	56;"	d
+F_MEM	pipeline.h	49;"	d
+F_RR	pipeline.h	53;"	d
+F_STORE	pipeline.h	51;"	d
+F_TRAP	pipeline.h	55;"	d
+F_UNCOND	pipeline.h	47;"	d
+FindFreeMHSR	dcache.cc	/^int CacheClass::FindFreeMHSR(cycle_t curCycle)$/;"	f	class:CacheClass
+FindNextPort	dcache.cc	/^int CacheClass::FindNextPort(cycle_t curCycle, cycle_t* portAvail)$/;"	f	class:CacheClass
+GBM	renamer.h	/^	reg_t GBM;$/;"	m	class:renamer
+HISTOGRAM_H	histogram.h	2;"	d
+HIST_BIT	bpred_interface.h	37;"	d
+HIST_MASK	bpred_interface.h	36;"	d
+HistogramClass	histogram.cc	/^HistogramClass::HistogramClass(int bins)$/;"	f	class:HistogramClass
+HistogramClass	histogram.h	/^class HistogramClass$/;"	c
+Hits	dcache.h	/^	inline int Hits(bool isStore)$/;"	f	class:CacheClass
+IC	pipeline.h	/^	CacheClass* IC;			\/\/ Instruction cache.$/;"	m	class:pipeline_t
+IC_INTERLEAVED	parameters.cc	/^bool IC_INTERLEAVED		    = false;$/;"	v
+IC_SINGLE_BB	parameters.cc	/^bool IC_SINGLE_BB		      = false;	\/\/ not used currently$/;"	v
+INCLUDED_SVDPI	svdpi.h	11;"	d
+INDEX_MASK	bpred_interface.h	34;"	d
+INTERLEAVE	sim.h	/^	static const size_t INTERLEAVE = 50;$/;"	m	class:sim_t
+INVALID	cache.h	10;"	d
+IN_ORDER_ISSUE	parameters.cc	/^bool IN_ORDER_ISSUE		    = false;	\/\/ not used currently$/;"	v
+IQ_INT	pipeline.h	/^	issue_queue IQ_INT;$/;"	m	class:pipeline_t
+ISA_SIM	sim.h	/^enum proc_type_t {ISA_SIM,MICRO_SIM};$/;"	e	enum:proc_type_t
+ISSUE_QUEUE_H	issue_queue.h	2;"	d
+ISSUE_QUEUE_SIZE	parameters.cc	/^uint32_t ISSUE_QUEUE_SIZE	= 32;$/;"	v
+ISSUE_WIDTH	parameters.cc	/^uint32_t ISSUE_WIDTH	    = 8;\/\/3;\/\/8;$/;"	v
+IS_AMO	pipeline.h	70;"	d
+IS_BRANCH	pipeline.h	63;"	d
+IS_COND_BRANCH	pipeline.h	64;"	d
+IS_CSR	pipeline.h	71;"	d
+IS_FP_OP	pipeline.h	69;"	d
+IS_LOAD	pipeline.h	66;"	d
+IS_MEM_OP	pipeline.h	68;"	d
+IS_STORE	pipeline.h	67;"	d
+IS_UNCOND_BRANCH	pipeline.h	65;"	d
+Increment	histogram.cc	/^void HistogramClass::Increment(int bin)$/;"	f	class:HistogramClass
+L1_DC_ASSOC	parameters.cc	/^unsigned int L1_DC_ASSOC            = 4;$/;"	v
+L1_DC_HIT_LATENCY	parameters.cc	/^unsigned int L1_DC_HIT_LATENCY      = 1;$/;"	v
+L1_DC_LINE_SIZE	parameters.cc	/^unsigned int L1_DC_LINE_SIZE        = 6;$/;"	v
+L1_DC_MISS_LATENCY	parameters.cc	/^unsigned int L1_DC_MISS_LATENCY     = 20;$/;"	v
+L1_DC_MISS_SRV_LATENCY	parameters.cc	/^unsigned int L1_DC_MISS_SRV_LATENCY = 1;$/;"	v
+L1_DC_MISS_SRV_PORTS	parameters.cc	/^unsigned int L1_DC_MISS_SRV_PORTS   = 1;$/;"	v
+L1_DC_NUM_MHSRs	parameters.cc	/^unsigned int L1_DC_NUM_MHSRs        = 2048; $/;"	v
+L1_DC_SETS	parameters.cc	/^unsigned int L1_DC_SETS             = 256;$/;"	v
+L1_IC_ASSOC	parameters.cc	/^unsigned int L1_IC_ASSOC            = 4;$/;"	v
+L1_IC_HIT_LATENCY	parameters.cc	/^unsigned int L1_IC_HIT_LATENCY      = 1;$/;"	v
+L1_IC_LINE_SIZE	parameters.cc	/^unsigned int L1_IC_LINE_SIZE        = 6;	$/;"	v
+L1_IC_MISS_LATENCY	parameters.cc	/^unsigned int L1_IC_MISS_LATENCY     = 20;$/;"	v
+L1_IC_MISS_SRV_LATENCY	parameters.cc	/^unsigned int L1_IC_MISS_SRV_LATENCY = 1;$/;"	v
+L1_IC_MISS_SRV_PORTS	parameters.cc	/^unsigned int L1_IC_MISS_SRV_PORTS   = 1;$/;"	v
+L1_IC_NUM_MHSRs	parameters.cc	/^unsigned int L1_IC_NUM_MHSRs        = 1024;$/;"	v
+L1_IC_SETS	parameters.cc	/^unsigned int L1_IC_SETS             = 256;$/;"	v
+LANE_H	lane.h	2;"	d
+LQ	lsu.h	/^	lsq_entry* LQ;		\/\/ Loads reside in this data structure between dispatch and retirement.$/;"	m	class:lsu
+LQ_SIZE	parameters.cc	/^uint32_t LQ_SIZE		      = 32;$/;"	v
+LQ_index	payload.h	/^	unsigned int LQ_index;	\/\/ Indices into LSU. Only used by loads, stores, and branches.$/;"	m	struct:__anon9
+LQ_phase	payload.h	/^	bool LQ_phase;$/;"	m	struct:__anon9
+LSU	pipeline.h	/^	lsu LSU;$/;"	m	class:pipeline_t
+LSU_H	lsu.h	2;"	d
+MAX_Q_DEPTH_b	bpred_interface.h	17;"	d
+MAX_Q_MASK_b	bpred_interface.h	18;"	d
+MHSRClass	dcache.h	/^class MHSRClass {$/;"	c
+MICRO_MMU	sim.h	13;"	d
+MICRO_SIM	sim.h	/^enum proc_type_t {ISA_SIM,MICRO_SIM};$/;"	e	enum:proc_type_t
+Misses	dcache.h	/^	inline int Misses(bool isStore) {$/;"	f	class:CacheClass
+NUMBER_FU_TYPES	fu.h	/^	NUMBER_FU_TYPES$/;"	e	enum:__anon5
+NUM_CHECKPOINTS	parameters.cc	/^uint32_t NUM_CHECKPOINTS	= 32;$/;"	v
+ORACLE_DISAMBIG	parameters.cc	/^bool ORACLE_DISAMBIG		  = true;$/;"	v
+PARAMETERS_H	parameters.h	2;"	d
+PAY	pipeline.h	/^	payload	PAY;$/;"	m	class:pipeline_t
+PAYLOAD_BUFFER_SIZE	payload.h	7;"	d
+PAYLOAD_H	payload.h	2;"	d
+PC	renamer.h	/^	reg_t PC;$/;"	m	struct:__anon10
+PC_MASK	bpred_interface.h	38;"	d
+PERFECT_BRANCH_PRED	parameters.cc	/^bool PERFECT_BRANCH_PRED	= false;$/;"	v
+PERFECT_DCACHE	parameters.cc	/^bool PERFECT_DCACHE		    = false;$/;"	v
+PERFECT_FETCH	parameters.cc	/^bool PERFECT_FETCH		    = false;$/;"	v
+PERFECT_ICACHE	parameters.cc	/^bool PERFECT_ICACHE		    = false;$/;"	v
+PIPELINE_REGISTER_H	pipeline_register.h	2;"	d
+PIPE_QUEUE_SIZE	parameters.cc	/^uint32_t PIPE_QUEUE_SIZE  = 1024;$/;"	v
+Print	histogram.cc	/^void HistogramClass::Print(FILE* fp, unsigned int norm_value)$/;"	f	class:HistogramClass
+Probe	dcache.cc	/^bool CacheClass::Probe(unsigned int Tid, \/\/RBRC$/;"	f	class:CacheClass
+RAS	bpred_interface.h	/^	RAS_node_b*	RAS;$/;"	m	class:bpred_interface
+RAS_action	bpred_interface.h	/^	int				RAS_action; \/\/ 1 push, -1 pop, 0 nothing$/;"	m	class:CTI_entry_b
+RAS_address	bpred_interface.h	/^	uint32_t			RAS_address;$/;"	m	class:CTI_entry_b
+RAS_lookup	bpred_interface.cc	/^bool bpred_interface::RAS_lookup(uint32_t* target)$/;"	f	class:bpred_interface
+RAS_node_b	bpred_interface.h	/^	RAS_node_b()$/;"	f	class:RAS_node_b
+RAS_node_b	bpred_interface.h	/^class RAS_node_b$/;"	c
+RAS_update	bpred_interface.cc	/^void bpred_interface::RAS_update()$/;"	f	class:bpred_interface
+RENAME2	pipeline.h	/^	pipeline_register* RENAME2;$/;"	m	class:pipeline_t
+RENAMER_H	renamer.h	2;"	d
+REN_INT	pipeline.h	/^	renamer* REN_INT;$/;"	m	class:pipeline_t
+RETIRE_WIDTH	parameters.cc	/^uint32_t RETIRE_WIDTH	    = 8;\/\/1;\/\/4;$/;"	v
+RF	renamer.h	/^	reg_t* RF;$/;"	m	class:renamer
+RMT	renamer.h	/^	unsigned int* RMT;$/;"	m	class:renamer
+SEL_IQ_INT	payload.h	/^	SEL_IQ_INT,		\/\/ Select integer IQ.$/;"	e	enum:__anon8
+SEL_IQ_NONE	payload.h	/^	SEL_IQ_NONE,		\/\/ Skip IQ: mark completed right away.$/;"	e	enum:__anon8
+SEL_IQ_NONE_EXCEPTION	payload.h	/^	SEL_IQ_NONE_EXCEPTION	\/\/ Skip IQ with exception: mark completed and exception right away.$/;"	e	enum:__anon8
+SET_BIT	pipeline.h	77;"	d
+SKIP_AMT	parameters.cc	/^unsigned int SKIP_AMT		  = 0;$/;"	v
+SMT	renamer.h	/^	unsigned int* SMT;$/;"	m	struct:__anon11
+SOURCE1	pipeline.h	82;"	d
+SOURCE2	pipeline.h	83;"	d
+SOURCE3	pipeline.h	84;"	d
+SQ	lsu.h	/^	lsq_entry* SQ;		\/\/ Stores reside in this data structure between dispatch and retirement.$/;"	m	class:lsu
+SQ_SIZE	parameters.cc	/^uint32_t SQ_SIZE		      = 32;$/;"	v
+SQ_index	payload.h	/^	unsigned int SQ_index;$/;"	m	struct:__anon9
+SQ_phase	payload.h	/^	bool SQ_phase;$/;"	m	struct:__anon9
+STATE	pipeline.cc	19;"	d	file:
+STATE	pipeline.cc	20;"	d	file:
+STATS_H	stats.h	2;"	d
+SV_CANONICAL_SIZE	svdpi.h	370;"	d
+SV_GET_SIGNED_BITS	svdpi.h	111;"	d
+SV_GET_UNSIGNED_BITS	svdpi.h	108;"	d
+SV_MASK	svdpi.h	106;"	d
+SV_PACKED_DATA_NELEMS	svdpi.h	100;"	d
+Samples	histogram.cc	/^int HistogramClass::Samples()$/;"	f	class:HistogramClass
+Sum	histogram.cc	/^unsigned long long HistogramClass::Sum()$/;"	f	class:HistogramClass
+SumSq	histogram.cc	/^unsigned long long HistogramClass::SumSq()$/;"	f	class:HistogramClass
+TABLE_SIZE	bpred_interface.h	33;"	d
+Tid	lsu.h	/^	unsigned int Tid;$/;"	m	class:lsu
+Tid	pipeline.h	/^	unsigned int Tid;$/;"	m	class:pipeline_t
+VPI_VECVAL	svdpi.h	86;"	d
+Variance	histogram.cc	/^double HistogramClass::Variance()$/;"	f	class:HistogramClass
+XXTERN	svdpi.h	504;"	d
+XXTERN	svdpi.h	62;"	d
+_RISCV_PIPELINE_H	pipeline.h	3;"	d
+_RISCV_SIM_H	sim.h	4;"	d
+a	svdpi.h	/^    uint32_t a;$/;"	m	struct:vpi_vecval
+a_addr	debug.h	/^	reg_t       	a_addr;$/;"	m	struct:__anon4
+a_exception	debug.h	/^  bool          a_exception;$/;"	m	struct:__anon4
+a_flags	debug.h	/^	unsigned int	a_flags;$/;"	m	struct:__anon4
+a_inst	debug.h	/^	insn_t	      a_inst;$/;"	m	struct:__anon4
+a_lat	debug.h	/^	unsigned int	a_lat;$/;"	m	struct:__anon4
+a_next_pc	debug.h	/^	reg_t	        a_next_pc;$/;"	m	struct:__anon4
+a_num_rdst	debug.h	/^	unsigned int	a_num_rdst;$/;"	m	struct:__anon4
+a_num_rsrc	debug.h	/^	unsigned int	a_num_rsrc;$/;"	m	struct:__anon4
+a_num_rsrcA	debug.h	/^	unsigned int	a_num_rsrcA;$/;"	m	struct:__anon4
+a_pc	debug.h	/^	reg_t	        a_pc;$/;"	m	struct:__anon4
+a_rdst	debug.h	/^	db_reg_t	    a_rdst[D_MAX_RDST];$/;"	m	struct:__anon4
+a_rsrc	debug.h	/^	db_reg_t	    a_rsrc[D_MAX_RSRC];$/;"	m	struct:__anon4
+a_rsrcA	debug.h	/^	db_reg_t	    a_rsrcA[D_MAX_RSRC];$/;"	m	struct:__anon4
+a_sequence	debug.h	/^  uint64_t      a_sequence;$/;"	m	struct:__anon4
+a_state	debug.h	/^  state_t*  a_state;$/;"	m	struct:__anon4
+a_valid	debug.h	/^  bool          a_valid;$/;"	m	struct:__anon4
+accessLatency	dcache.h	/^	HistogramClass* accessLatency;$/;"	m	class:CacheClass
+active_list_t	renamer.h	/^} active_list_t;$/;"	t	typeref:struct:__anon10
+addr	bpred_interface.h	/^	uint32_t		addr;$/;"	m	class:RAS_node_b
+addr	lsu.h	/^	reg_t addr;	\/\/ address$/;"	m	struct:__anon7
+addr	payload.h	/^	reg_t addr;$/;"	m	struct:__anon9
+addr_avail	lsu.h	/^	bool addr_avail;	\/\/ address is available$/;"	m	struct:__anon7
+agen	alu.cc	/^void pipeline_t::agen(unsigned int index) {$/;"	f	class:pipeline_t
+al_head	renamer.h	/^	unsigned int al_head;$/;"	m	class:renamer
+al_length	renamer.h	/^	unsigned int al_length;$/;"	m	class:renamer
+al_size	renamer.h	/^	unsigned int al_size;$/;"	m	class:renamer
+al_tail	renamer.h	/^	unsigned int al_tail;$/;"	m	class:renamer
+alu	alu.cc	/^void pipeline_t::alu(unsigned int index) {$/;"	f	class:pipeline_t
+amo_op	renamer.h	/^  bool amo_op;$/;"	m	struct:__anon10
+array	dcache.h	/^	CacheArray array;          \/* The D-Cache array.                           *\/$/;"	m	class:CacheClass
+assoc	cache.h	/^	unsigned int assoc;$/;"	m	class:cache
+b	svdpi.h	/^    uint32_t b;$/;"	m	struct:vpi_vecval
+boot	sim.cc	/^void sim_t::boot()$/;"	f	class:sim_t
+bpred_interface	bpred_interface.cc	/^bpred_interface::bpred_interface()$/;"	f	class:bpred_interface
+bpred_interface	bpred_interface.h	/^class bpred_interface$/;"	c
+branch	renamer.h	/^	bool branch;$/;"	m	struct:__anon10
+branch_ID	payload.h	/^	unsigned int branch_ID;	\/\/ When a checkpoint is created for a branch,$/;"	m	struct:__anon9
+branch_mask	issue_queue.h	/^	uint64_t branch_mask;$/;"	m	struct:__anon6
+branch_mask	pipeline_register.h	/^	unsigned long long branch_mask;	\/\/ branches that this instruction depends on$/;"	m	class:pipeline_register
+buf	payload.h	/^	payload_t    buf[PAYLOAD_BUFFER_SIZE];$/;"	m	class:payload
+bundle_ready	fetch_queue.cc	/^bool fetch_queue::bundle_ready(unsigned int i) {$/;"	f	class:fetch_queue
+busy	dcache.h	/^  bool  busy;          \/*Whether MHSR is busy *\/$/;"	m	class:MHSRClass
+bytes	debug.h	/^	unsigned char bytes[8];$/;"	m	union:__anon3
+c	svdpi.h	/^typedef struct { unsigned int c; unsigned int d;}$/;"	m	struct:__anon12
+c_next_pc	payload.h	/^	reg_t c_next_pc;$/;"	m	struct:__anon9
+cache	cache.h	/^	cache(unsigned int size, unsigned int assoc) {$/;"	f	class:cache
+cache	cache.h	/^class cache {$/;"	c
+cacheAccess	dcache.h	/^	int cacheAccess[2];        \/* Number of cache accesses. 0=loads, 1=stores. *\/$/;"	m	class:CacheClass
+cacheMisses	dcache.h	/^	int cacheMisses[2];        \/* Number of cache misses.   0=loads, 1=stores. *\/$/;"	m	class:CacheClass
+checkInstruction	checker.cc	/^void pipeline_t::checkInstruction(reg_t pc,unsigned int dest,union64_t dest_value) {$/;"	f	class:pipeline_t
+check_double	checker.cc	/^void pipeline_t::check_double(reg_t micro0, reg_t micro1, reg_t isa0, reg_t isa1, const char *desc) {$/;"	f	class:pipeline_t
+check_next	debug.cc	/^debug_index_t debug_buffer_t::check_next(debug_index_t i, reg_t pc) {$/;"	f	class:debug_buffer_t
+check_single	checker.cc	/^void pipeline_t::check_single(reg_t micro, reg_t isa, db_t* actual, const char *desc) {$/;"	f	class:pipeline_t
+check_state	checker.cc	/^void pipeline_t::check_state(state_t* micro_state, state_t* isa_state, db_t* actual) {$/;"	f	class:pipeline_t
+checker	checker.cc	/^void pipeline_t::checker() {$/;"	f	class:pipeline_t
+checkpoint	lsu.cc	/^void lsu::checkpoint(unsigned int& chkpt_lq_tail, bool& chkpt_lq_tail_phase,$/;"	f	class:lsu
+checkpoint	payload.h	/^	bool checkpoint;		$/;"	m	struct:__anon9
+checkpoint	renamer.cc	/^unsigned int renamer::checkpoint() {$/;"	f	class:renamer
+checkpoint_t	renamer.h	/^} checkpoint_t;$/;"	t	typeref:struct:__anon11
+chkpts	renamer.h	/^	checkpoint_t* chkpts;$/;"	m	class:renamer
+clear	payload.cc	/^void payload::clear() {$/;"	f	class:payload
+clear_branch_bit	issue_queue.cc	/^void issue_queue::clear_branch_bit(unsigned int branch_ID) {$/;"	f	class:issue_queue
+clear_fetch_amo	pipeline.h	/^  inline void clear_fetch_amo(){$/;"	f	class:pipeline_t
+clear_fetch_csr	pipeline.h	/^  inline void clear_fetch_csr(){$/;"	f	class:pipeline_t
+clear_fetch_exception	pipeline.h	/^  inline void clear_fetch_exception(){$/;"	f	class:pipeline_t
+clear_ready	renamer.cc	/^void renamer::clear_ready(unsigned int phys_reg) {$/;"	f	class:renamer
+commit	lsu.cc	/^bool lsu::commit(bool load, bool atomic_op, bool& atomic_success) {$/;"	f	class:lsu
+commit	renamer.cc	/^void renamer::commit(bool& committed, bool& load, bool& store, bool& branch, bool& amo_op, bool& exception, bool& ld_violation, bool& csr_atomic, trap_t** trap_p, reg_t& offending_PC) {$/;"	f	class:renamer
+commit_log	pipeline.cc	/^static void commit_log(state_t* state, reg_t pc, insn_t insn)$/;"	f	file:
+comp_target	bpred_interface.h	/^	uint32_t			comp_target;$/;"	m	class:CTI_entry_b
+completed	renamer.h	/^	bool completed;$/;"	m	struct:__anon10
+conf	bpred_interface.h	/^	uint32_t			conf;$/;"	m	class:CTI_entry_b
+conf_table	bpred_interface.h	/^	BpredPredictAutomaton*	conf_table;$/;"	m	class:bpred_interface
+conf_update	bpred_interface.h	/^	void conf_update(uint32_t outcome, bool use_reset, uint32_t max_value)$/;"	f	class:BpredPredictAutomaton
+contents	cache.h	/^		T* contents;$/;"	m	struct:cache::__anon1
+copy_mem	lsu.cc	/^void lsu::copy_mem(char** master_mem_table) {$/;"	f	class:lsu
+copy_state_to_micro	pipeline.cc	/^void pipeline_t::copy_state_to_micro() {$/;"	f	class:pipeline_t
+count	stats.h	/^  uint64_t count;$/;"	m	struct:counter
+counter	stats.h	/^typedef struct counter {$/;"	s
+counter	stats.h	14;"	d
+counter_map	stats.h	/^  std::map<const char*, counter_t*, ltstr> counter_map;$/;"	m	class:stats_t
+counter_t	stats.h	/^} counter_t;$/;"	t	typeref:struct:counter
+csr_op	renamer.h	/^  bool csr_op;$/;"	m	struct:__anon10
+cti_Q	bpred_interface.h	/^	CTI_entry_b	cti_Q[MAX_Q_DEPTH_b];$/;"	m	class:bpred_interface
+cti_head	bpred_interface.h	/^	unsigned int	cti_head;$/;"	m	class:bpred_interface
+cti_tail	bpred_interface.h	/^	unsigned int	cti_tail;$/;"	m	class:bpred_interface
+ctrlc_pressed	sim.cc	/^volatile bool ctrlc_pressed = false;$/;"	v
+current_proc	sim.h	/^	size_t current_proc;$/;"	m	class:sim_t
+current_step	sim.h	/^	size_t current_step;$/;"	m	class:sim_t
+cycle	pipeline.h	/^	cycle_t cycle;$/;"	m	class:pipeline_t
+d	payload.h	/^	double d;$/;"	m	union:union64_t
+d	svdpi.h	/^typedef struct { unsigned int c; unsigned int d;}$/;"	m	struct:__anon12
+db	debug.h	/^	db_t* db;$/;"	m	class:debug_buffer_t
+db_index	payload.h	/^	debug_index_t db_index;	$/;"	m	struct:__anon9
+db_reg_t	debug.h	/^} db_reg_t;$/;"	t	typeref:struct:__anon2
+db_t	debug.h	/^} db_t;$/;"	t	typeref:struct:__anon4
+debug	sim.h	/^	bool debug;$/;"	m	class:sim_t
+debug_buffer_t	debug.cc	/^debug_buffer_t::debug_buffer_t(unsigned int window_size) {$/;"	f	class:debug_buffer_t
+debug_buffer_t	debug.h	/^class debug_buffer_t {$/;"	c
+debug_index_t	debug.h	/^typedef unsigned int	debug_index_t;$/;"	t
+debug_index_t	payload.h	/^typedef unsigned int debug_index_t;$/;"	t
+debug_mmu	sim.h	/^	mmu_t* debug_mmu;  \/\/ debug port into main memory$/;"	m	class:sim_t
+dec_counter	stats.h	13;"	d
+decode	bpred_interface.cc	/^void bpred_interface::decode()$/;"	f	class:bpred_interface
+decode	decode.cc	/^void pipeline_t::decode() {$/;"	f	class:pipeline_t
+decode_log	pipeline.h	/^  FILE* decode_log;$/;"	m	class:pipeline_t
+denominator	stats.h	/^  char* denominator;$/;"	m	struct:rate
+dest_valid	renamer.h	/^	bool dest_valid;$/;"	m	struct:__anon10
+dirty	dcache.h	/^	bool dirty; \/* Indicates the line is dirty.                    *\/$/;"	m	class:CacheLineClass
+disambiguate	lsu.cc	/^bool lsu::disambiguate(unsigned int lq_index,$/;"	f	class:lsu
+disasm	pipeline.cc	/^void pipeline_t::disasm(insn_t insn)$/;"	f	class:pipeline_t
+disasm	pipeline.cc	/^void pipeline_t::disasm(insn_t insn, cycle_t cycle, reg_t pc, uint64_t seq, FILE* out)$/;"	f	class:pipeline_t
+disasm	pipeline.cc	/^void pipeline_t::disasm(insn_t insn, reg_t pc, FILE* out)$/;"	f	class:pipeline_t
+disasm	pipeline.cc	/^void pipeline_t::disasm(insn_t insn,reg_t pc)$/;"	f	class:pipeline_t
+dispatch	dispatch.cc	/^void pipeline_t::dispatch() {$/;"	f	class:pipeline_t
+dispatch	issue_queue.cc	/^void issue_queue::dispatch(unsigned int index, unsigned long long branch_mask, unsigned int lane_id,$/;"	f	class:issue_queue
+dispatch	lsu.cc	/^void lsu::dispatch(bool load,$/;"	f	class:lsu
+dispatch_inst	renamer.cc	/^unsigned int renamer::dispatch_inst(bool dest_valid, unsigned int log_reg, unsigned int phys_reg, bool load, bool store, bool branch, bool amo_op, bool csr_op, reg_t PC) {$/;"	f	class:renamer
+dispatch_log	pipeline.h	/^  FILE* dispatch_log;$/;"	m	class:pipeline_t
+dispatch_width	pipeline.h	/^	unsigned int dispatch_width;	\/\/ rename, dispatch width$/;"	m	class:pipeline_t
+dump	debug.cc	/^void debug_buffer_t::dump(pipeline_t* proc, db_t* actual, FILE* file)$/;"	f	class:debug_buffer_t
+dump	payload.cc	/^void payload::dump(pipeline_t* proc,unsigned int index,FILE* file)$/;"	f	class:payload
+dump_al	renamer.cc	/^void renamer::dump_al(pipeline_t* proc, payload& pay, unsigned int index,FILE* file)$/;"	f	class:renamer
+dump_counters	stats.cc	/^void stats_t::dump_counters(){$/;"	f	class:stats_t
+dump_iq	issue_queue.cc	/^void issue_queue::dump_iq(pipeline_t* proc, unsigned int index,FILE* file)$/;"	f	class:issue_queue
+dump_lq	lsu.cc	/^void lsu::dump_lq(pipeline_t* proc, unsigned int index,FILE* file)$/;"	f	class:lsu
+dump_phase_counters	stats.cc	/^void stats_t::dump_phase_counters(){$/;"	f	class:stats_t
+dump_phase_rates	stats.cc	/^void stats_t::dump_phase_rates(){$/;"	f	class:stats_t
+dump_rates	stats.cc	/^void stats_t::dump_rates(){$/;"	f	class:stats_t
+dump_sq	lsu.cc	/^void lsu::dump_sq(pipeline_t* proc, unsigned int index,FILE* file)$/;"	f	class:lsu
+dump_stats	bpred_interface.cc	/^void bpred_interface::dump_stats(FILE* fp)$/;"	f	class:bpred_interface
+dump_stats	lsu.cc	/^void lsu::dump_stats(FILE* fp) {$/;"	f	class:lsu
+dw	payload.h	/^  reg_t dw;$/;"	m	union:union64_t
+dword	debug.h	/^  reg_t dword; \/\/Double word$/;"	m	union:__anon3
+empty	debug.h	/^	inline	bool empty() {$/;"	f	class:debug_buffer_t
+enough_space	fetch_queue.cc	/^bool fetch_queue::enough_space(unsigned int i) {$/;"	f	class:fetch_queue
+entry	cache.h	/^	} entry;$/;"	t	class:cache	typeref:struct:cache::__anon1
+entry_id	debug.h	/^  uint64_t      entry_id;$/;"	m	struct:__anon4
+ex	lane.h	/^	pipeline_register ex;	\/\/ pipeline register of Execute Stage$/;"	m	class:lane
+exception	renamer.h	/^	bool exception;$/;"	m	struct:__anon10
+execute	execute.cc	/^void pipeline_t::execute(unsigned int lane_number) {$/;"	f	class:pipeline_t
+execute_amo	renamer.cc	/^bool renamer::execute_amo(payload& PAY, mmu_t* mmu){$/;"	f	class:renamer
+execute_csr	renamer.cc	/^bool renamer::execute_csr(payload& PAY, state_t* state){$/;"	f	class:renamer
+execute_insn	pipeline.cc	/^static reg_t execute_insn(pipeline_t* p, reg_t pc, insn_fetch_t fetch)$/;"	f	file:
+execute_load	lsu.cc	/^void lsu::execute_load(cycle_t cycle,$/;"	f	class:lsu
+execute_log	pipeline.h	/^  FILE* execute_log;$/;"	m	class:pipeline_t
+f	payload.h	/^	float f[2];$/;"	m	union:union64_t
+fetch	fetch.cc	/^void pipeline_t::fetch() {$/;"	f	class:pipeline_t
+fetch_amo	pipeline.h	/^  bool fetch_amo;$/;"	m	class:pipeline_t
+fetch_csr	pipeline.h	/^  bool fetch_csr;$/;"	m	class:pipeline_t
+fetch_exception	payload.h	/^  bool fetch_exception;$/;"	m	struct:__anon9
+fetch_exception	pipeline.h	/^  bool fetch_exception;$/;"	m	class:pipeline_t
+fetch_exception_cause	payload.h	/^  bool fetch_exception_cause;$/;"	m	struct:__anon9
+fetch_log	pipeline.h	/^  FILE* fetch_log;$/;"	m	class:pipeline_t
+fetch_queue	fetch_queue.cc	/^fetch_queue::fetch_queue(unsigned int size, pipeline_t* _proc) {$/;"	f	class:fetch_queue
+fetch_queue	fetch_queue.h	/^class fetch_queue {$/;"	c
+fetch_width	pipeline.h	/^	unsigned int fetch_width;	\/\/ fetch, decode width$/;"	m	class:pipeline_t
+find	debug.cc	/^debug_index_t debug_buffer_t::find(debug_index_t i, reg_t pc) {$/;"	f	class:debug_buffer_t
+find_free_bit	renamer.cc	/^unsigned int renamer::find_free_bit() {$/;"	f	class:renamer
+finish_syscall_exit	debug.h	/^	inline	void finish_syscall_exit() {$/;"	f	class:debug_buffer_t
+first	debug.h	/^	inline debug_index_t first(reg_t pc) {$/;"	f	class:debug_buffer_t
+fix_pred	bpred_interface.cc	/^void bpred_interface::fix_pred(unsigned int pred_tag, unsigned int next_pc)$/;"	f	class:bpred_interface
+fl	issue_queue.h	/^	unsigned int* fl;		\/\/ This is the list of free issue queue entries, i.e., the "free list".$/;"	m	class:issue_queue
+fl_head	issue_queue.h	/^	unsigned int fl_head;		\/\/ Head of issue queue's free list.$/;"	m	class:issue_queue
+fl_head	renamer.h	/^	unsigned int fl_head;$/;"	m	class:renamer
+fl_head	renamer.h	/^	unsigned int fl_head;$/;"	m	struct:__anon11
+fl_length	issue_queue.h	/^	unsigned int fl_length;			\/\/ Length of issue queue's free list.$/;"	m	class:issue_queue
+fl_length	renamer.h	/^	unsigned int fl_length;$/;"	m	class:renamer
+fl_size	renamer.h	/^	unsigned int fl_size;$/;"	m	class:renamer
+fl_tail	issue_queue.h	/^	unsigned int fl_tail;		\/\/ Tail of issue queue's free list.$/;"	m	class:issue_queue
+fl_tail	renamer.h	/^	unsigned int fl_tail;$/;"	m	class:renamer
+flags	payload.h	/^	unsigned int flags;          $/;"	m	struct:__anon9
+flush	bpred_interface.cc	/^void bpred_interface::flush()$/;"	f	class:bpred_interface
+flush	cache.h	/^	void flush() {$/;"	f	class:cache
+flush	dcache.cc	/^void CacheClass::flush()$/;"	f	class:CacheClass
+flush	fetch_queue.cc	/^void fetch_queue::flush() {$/;"	f	class:fetch_queue
+flush	issue_queue.cc	/^void issue_queue::flush() {$/;"	f	class:issue_queue
+flush	lsu.cc	/^void lsu::flush() {$/;"	f	class:lsu
+flush_RAS	bpred_interface.h	/^	bool			flush_RAS;$/;"	m	class:CTI_entry_b
+fm	bpred_interface.h	/^	uint32_t			fm;		\/\/ "FM"$/;"	m	class:CTI_entry_b
+fm_table	bpred_interface.h	/^	BpredPredictAutomaton*	fm_table;	\/\/ "FM": false-misprediction estimator$/;"	m	class:bpred_interface
+fu	payload.h	/^	fu_type fu;           \/\/ Operation function unit type.$/;"	m	struct:__anon9
+fu_lane_matrix	pipeline.h	/^	unsigned int fu_lane_matrix[(unsigned int)NUMBER_FU_TYPES];	\/\/ Indexed by FU type: bit vector indicating which lanes have that FU type.$/;"	m	class:pipeline_t
+fu_lane_ptr	pipeline.h	/^	unsigned int fu_lane_ptr[(unsigned int)NUMBER_FU_TYPES];	\/\/ Indexed by FU type: lane to which the last instruction of that FU type was steered.$/;"	m	class:pipeline_t
+fu_type	fu.h	/^} fu_type;$/;"	t	typeref:enum:__anon5
+gbm	renamer.h	/^	unsigned long long gbm;$/;"	m	struct:__anon11
+get_arch_reg_value	pipeline.cc	/^uint64_t pipeline_t::get_arch_reg_value(int reg_id) { $/;"	f	class:pipeline_t
+get_branch_mask	renamer.cc	/^unsigned long long renamer::get_branch_mask() {$/;"	f	class:renamer
+get_core	sim.h	/^	processor_t* get_core(size_t i) {$/;"	f	class:sim_t
+get_counter	stats.cc	/^uint64_t stats_t::get_counter(const char* name){$/;"	f	class:stats_t
+get_exception	renamer.cc	/^bool renamer::get_exception(unsigned int AL_index) {$/;"	f	class:renamer
+get_htif	sim.h	/^	htif_isasim_t* get_htif() {$/;"	f	class:sim_t
+get_instruction	pipeline.cc	/^uint32_t pipeline_t::get_instruction(uint64_t inst_pc){$/;"	f	class:pipeline_t
+get_pc	pipeline.h	/^  uint64_t get_pc(){return get_state()->pc;}$/;"	f	class:pipeline_t
+get_pred	bpred_interface.cc	/^unsigned int bpred_interface::get_pred(unsigned int branch_history,$/;"	f	class:bpred_interface
+get_proc_type	sim.h	/^  proc_type_t get_proc_type(){return proc_type;}$/;"	f	class:sim_t
+get_procs_checker	sim.cc	/^bool sim_t::get_procs_checker()$/;"	f	class:sim_t
+get_procs_debug	sim.cc	/^bool sim_t::get_procs_debug()$/;"	f	class:sim_t
+get_scr	sim.cc	/^reg_t sim_t::get_scr(int which)$/;"	f	class:sim_t
+get_stats	pipeline.h	/^  stats_t* get_stats(){return stats;}$/;"	f	class:pipeline_t
+global_history	bpred_interface.h	/^	uint32_t			global_history;$/;"	m	class:CTI_entry_b
+good_instruction	payload.h	/^	bool good_instruction;	$/;"	m	struct:__anon9
+handle_signal	sim.cc	/^static void handle_signal(int sig)$/;"	f	file:
+head	debug.h	/^	debug_index_t head;$/;"	m	class:debug_buffer_t
+head	fetch_queue.h	/^	unsigned int head;	\/\/ head pointer$/;"	m	class:fetch_queue
+head	payload.h	/^	unsigned int head;$/;"	m	class:payload
+hierarchy	stats.h	/^  char* hierarchy;$/;"	m	struct:counter
+hierarchy	stats.h	/^  char* hierarchy;$/;"	m	struct:rate
+hist	histogram.h	/^	int* hist;   \/* Actually contains the histogram data.                   *\/$/;"	m	class:HistogramClass
+histogram_enabled	sim.h	/^	bool histogram_enabled; \/\/ provide a histogram of PCs$/;"	m	class:sim_t
+history	bpred_interface.h	/^	uint32_t			history;$/;"	m	class:CTI_entry_b
+hitLat	dcache.h	/^	cycle_t hitLat;                \/* Cycles of delay for cache hits.              *\/$/;"	m	class:CacheClass
+htif	sim.h	/^	std::unique_ptr<htif_isasim_t> htif;$/;"	m	class:sim_t
+hungry	debug.h	/^	inline	bool hungry() {$/;"	f	class:debug_buffer_t
+hyst	bpred_interface.h	/^	uint8_t			hyst;$/;"	m	class:BpredPredictAutomaton
+idle_cycles	sim.h	/^	size_t idle_cycles;$/;"	m	class:sim_t
+inc_counter	stats.h	12;"	d
+index	issue_queue.h	/^	unsigned int index;$/;"	m	struct:__anon6
+index	pipeline_register.h	/^	unsigned int index;			        \/\/ index into instruction payload buffer$/;"	m	class:pipeline_register
+init	renamer.cc	/^void renamer::init() {$/;"	f	class:renamer
+inst	bpred_interface.h	/^	insn_t		inst;$/;"	m	class:CTI_entry_b
+inst	payload.h	/^	insn_t inst;           \/\/ The simplescalar instruction.$/;"	m	struct:__anon9
+inst_sequence	debug.h	/^  uint64_t    inst_sequence;$/;"	m	class:debug_buffer_t
+iq	payload.h	/^	sel_iq iq;			$/;"	m	struct:__anon9
+is_active	debug.cc	/^bool debug_buffer_t::is_active(unsigned int e) {$/;"	f	class:debug_buffer_t
+is_call	bpred_interface.h	/^	bool			is_call;$/;"	m	class:CTI_entry_b
+is_cond	bpred_interface.h	/^	bool			is_cond;$/;"	m	class:CTI_entry_b
+is_conf	bpred_interface.h	/^	bool			is_conf;$/;"	m	class:CTI_entry_b
+is_ready	renamer.cc	/^bool renamer::is_ready(unsigned int phys_reg) {$/;"	f	class:renamer
+is_return	bpred_interface.h	/^	bool			is_return;$/;"	m	class:CTI_entry_b
+is_signed	lsu.h	/^	bool is_signed;		\/\/ signed (true) or unsigned (false)$/;"	m	struct:__anon7
+is_signed	payload.h	/^	bool is_signed;		\/\/ If 'true', the loaded value is signed,$/;"	m	struct:__anon9
+isa_sim	debug.h	/^  sim_t* isa_sim;$/;"	m	class:debug_buffer_t
+issue_log	pipeline.h	/^  FILE* issue_log;$/;"	m	class:pipeline_t
+issue_queue	issue_queue.cc	/^issue_queue::issue_queue(unsigned int size,pipeline_t* _proc):proc(_proc) {$/;"	f	class:issue_queue
+issue_queue	issue_queue.h	/^class issue_queue {$/;"	c
+issue_queue_entry_t	issue_queue.h	/^} issue_queue_entry_t;$/;"	t	typeref:struct:__anon6
+issue_width	pipeline.h	/^	unsigned int issue_width;	\/\/ issue width$/;"	m	class:pipeline_t
+lane	lane.cc	/^lane::lane() {$/;"	f	class:lane
+lane	lane.h	/^class lane {$/;"	c
+lane_id	issue_queue.h	/^	unsigned int lane_id;$/;"	m	struct:__anon6
+lane_id	payload.h	/^	unsigned int lane_id;	\/\/ Execution lane chosen for the instruction.$/;"	m	struct:__anon9
+lastCycle	dcache.h	/^	cycle_t lastCycle;       \/* curCycle of last access.                     *\/$/;"	m	class:CacheClass
+latency	payload.h	/^	cycle_t latency; \/\/ Operation latency (ignore: not currently used).$/;"	m	struct:__anon9
+ld_violation	renamer.h	/^  bool ld_violation;$/;"	m	struct:__anon10
+left	payload.h	/^	bool left;			\/\/ LWL or SWL instruction.$/;"	m	struct:__anon9
+len	histogram.h	/^	int len;     \/* Number of bins in the histogram data.                   *\/$/;"	m	class:HistogramClass
+length	debug.h	/^	unsigned int  length;$/;"	m	class:debug_buffer_t
+length	fetch_queue.h	/^	unsigned int length;		\/\/ number of instructions in fetch queue$/;"	m	class:fetch_queue
+length	issue_queue.h	/^	unsigned int length;			\/\/ Number of instructions in the issue queue.$/;"	m	class:issue_queue
+length	payload.h	/^	int          length;$/;"	m	class:payload
+lineAddress	dcache.h	/^	reg_t lineAddress;    \/* Line being loaded by MHSR.        *\/$/;"	m	class:MHSRClass
+lineSize	dcache.h	/^	int       lineSize;        \/* D-Cache line size.  Must be a power of 2.    *\/$/;"	m	class:CacheClass
+load	renamer.h	/^	bool load;$/;"	m	struct:__anon10
+load_addr	lsu.cc	/^bool lsu::load_addr(cycle_t cycle,$/;"	f	class:lsu
+load_replay	execute.cc	/^void pipeline_t::load_replay(){$/;"	f	class:pipeline_t
+load_replay	lsu.cc	/^bool lsu::load_replay(cycle_t cycle, unsigned int& pay_index, reg_t& value) {$/;"	f	class:lsu
+log_reg	renamer.h	/^	unsigned int log_reg;$/;"	m	struct:__anon10
+logging_on	parameters.cc	/^bool logging_on                     = false;$/;"	v
+logging_on_at	parameters.cc	/^uint64_t logging_on_at              = -1;  \/\/0xffffffffffffffff$/;"	v
+lookup	cache.h	/^T* cache<T>::lookup(reg_t id, T* contents,$/;"	f	class:cache
+lq_head	lsu.h	/^	unsigned int lq_head;$/;"	m	class:lsu
+lq_head_phase	lsu.h	/^	bool lq_head_phase;$/;"	m	class:lsu
+lq_length	lsu.h	/^	unsigned int lq_length;$/;"	m	class:lsu
+lq_size	lsu.h	/^	unsigned int lq_size;$/;"	m	class:lsu
+lq_tail	lsu.h	/^	unsigned int lq_tail;$/;"	m	class:lsu
+lq_tail_phase	lsu.h	/^	bool lq_tail_phase;$/;"	m	class:lsu
+lru	cache.h	/^		unsigned int lru;$/;"	m	struct:cache::__anon1
+lsq_entry	lsu.h	/^} lsq_entry;$/;"	t	typeref:struct:__anon7
+lsu	lsu.cc	/^lsu::lsu(unsigned int lq_size, unsigned int sq_size, unsigned int Tid, mmu_t* _mmu, pipeline_t* _proc):$/;"	f	class:lsu
+lsu	lsu.h	/^class lsu {$/;"	c
+lsu_log	pipeline.h	/^  FILE* lsu_log;$/;"	m	class:pipeline_t
+ltstr	stats.h	/^struct ltstr$/;"	s
+make_predictions	bpred_interface.cc	/^void bpred_interface::make_predictions(unsigned int branch_history)$/;"	f	class:bpred_interface
+map_copy	renamer.cc	/^void renamer::map_copy(unsigned int* from, unsigned int* to) {$/;"	f	class:renamer
+map_to_actual	payload.cc	/^void payload::map_to_actual(pipeline_t* proc, unsigned int index, unsigned int Tid) {$/;"	f	class:payload
+maxOutMiss	dcache.h	/^	int       maxOutMiss;      \/* The number of MHSRs.                         *\/$/;"	m	class:CacheClass
+mem	sim.h	/^	char* mem; \/\/ main memory$/;"	m	class:sim_t
+memsz	sim.h	/^	size_t memsz; \/\/ memory size in bytes$/;"	m	class:sim_t
+mhsr	dcache.h	/^	MHSRClass* mhsr;           \/* The miss handling status registers.          *\/$/;"	m	class:CacheClass
+mhsr	dcache.h	/^	int mhsr;   \/* Index of MHSR that is loading this line.        *\/$/;"	m	class:CacheLineClass
+missLat	dcache.h	/^	cycle_t missLat;               \/* Cycles of delay for cache misses, and write$/;"	m	class:CacheClass
+missPortAvail	dcache.h	/^	cycle_t* missPortAvail;  \/* Cycle each miss port will be available.$/;"	m	class:CacheClass
+missPorts	dcache.h	/^	int missPorts;             \/* Number of miss ports available.              *\/$/;"	m	class:CacheClass
+missSrv	dcache.h	/^	cycle_t missSrv;               \/* Pipeline reuse latency for miss ports.       *\/$/;"	m	class:CacheClass
+miss_resolve_cycle	lsu.h	/^	cycle_t miss_resolve_cycle;	\/\/ Cycle when referenced memory block will be in cache.$/;"	m	struct:__anon7
+missed	lsu.h	/^	bool missed;				\/\/ The memory block referenced by load or store is not in cache.$/;"	m	struct:__anon7
+mmu	lsu.h	/^  mmu_t* mmu;$/;"	m	class:lsu
+multiplier	stats.h	/^  double multiplier;$/;"	m	struct:rate
+n	debug.h	/^	unsigned int  n;		 \/\/ arch register$/;"	m	struct:__anon2
+n_branches	renamer.h	/^	unsigned int n_branches;$/;"	m	class:renamer
+n_forward	lsu.h	/^	unsigned int n_forward;$/;"	m	class:lsu
+n_load	lsu.h	/^	unsigned int n_load;$/;"	m	class:lsu
+n_log_regs	renamer.h	/^	unsigned int n_log_regs;$/;"	m	class:renamer
+n_phys_regs	renamer.h	/^	unsigned int n_phys_regs;$/;"	m	class:renamer
+n_stall_disambig	lsu.h	/^	unsigned int n_stall_disambig;$/;"	m	class:lsu
+n_stall_miss_l	lsu.h	/^	unsigned int n_stall_miss_l;$/;"	m	class:lsu
+n_stall_miss_s	lsu.h	/^	unsigned int n_stall_miss_s;$/;"	m	class:lsu
+n_store	lsu.h	/^	unsigned int n_store;$/;"	m	class:lsu
+name	stats.h	/^  char* name;$/;"	m	struct:counter
+name	stats.h	/^  char* name;$/;"	m	struct:rate
+next	bpred_interface.h	/^	RAS_node_b*		next;$/;"	m	class:RAS_node_b
+next_fetch_cycle	pipeline.h	/^	cycle_t next_fetch_cycle;	\/\/ Support for I$ miss stalls.$/;"	m	class:pipeline_t
+next_pc	payload.h	/^	reg_t next_pc;	$/;"	m	struct:__anon9
+next_replay_index	lsu.cc	/^void lsu::next_replay_index(bool restart) {$/;"	f	class:lsu
+next_timer	pipeline.cc	/^static size_t next_timer(state_t* state)$/;"	f	file:
+num_cores	sim.h	/^	size_t num_cores() {$/;"	f	class:sim_t
+num_insn	pipeline.h	/^	uint64_t num_insn;$/;"	m	class:pipeline_t
+num_insn_split	pipeline.h	/^	uint64_t num_insn_split;$/;"	m	class:pipeline_t
+num_misses	cache.h	/^	unsigned int num_misses;$/;"	m	class:cache
+numerator	stats.h	/^  char* numerator;$/;"	m	struct:rate
+operator ()	stats.h	/^    bool operator()(const char* s1, const char* s2) const {$/;"	f	struct:ltstr
+original_pred	bpred_interface.h	/^	uint32_t			original_pred;$/;"	m	class:CTI_entry_b
+p_vpi_vecval	svdpi.h	/^} s_vpi_vecval, *p_vpi_vecval;$/;"	t	typeref:struct:vpi_vecval
+pay_index	lsu.h	/^	unsigned int pay_index;	\/\/ Index into PAY buffer.$/;"	m	struct:__anon7
+payload	payload.cc	/^payload::payload() {$/;"	f	class:payload
+payload	payload.h	/^class payload {$/;"	c
+payload_t	payload.h	/^} payload_t;$/;"	t	typeref:struct:__anon9
+pc	bpred_interface.h	/^	uint32_t			pc;$/;"	m	class:CTI_entry_b
+pc	payload.h	/^	reg_t pc;		\/\/ The instruction's PC.$/;"	m	struct:__anon9
+pc	pipeline.h	/^	reg_t pc;		\/\/ Speculative program counter.$/;"	m	class:pipeline_t
+pc_ptr	debug.h	/^	debug_index_t pc_ptr;	\/\/ used by pop_pc()$/;"	m	class:debug_buffer_t
+peek	debug.h	/^	inline	db_t *peek(debug_index_t i) {$/;"	f	class:debug_buffer_t
+phase_count	stats.h	/^  uint64_t phase_count;$/;"	m	struct:counter
+phase_counter_name	stats.h	/^  char phase_counter_name[16];$/;"	m	class:stats_t
+phase_id	stats.h	/^  uint64_t phase_id;$/;"	m	class:stats_t
+phase_interval	stats.h	/^  uint64_t phase_interval;$/;"	m	class:stats_t
+phase_log	pipeline.h	/^  FILE* phase_log;$/;"	m	class:pipeline_t
+phase_log	stats.h	/^  FILE* phase_log;$/;"	m	class:stats_t
+phase_rate	stats.h	/^  double phase_rate;$/;"	m	struct:rate
+phase_tick	stats.cc	/^void stats_t::phase_tick(){$/;"	f	class:stats_t
+phys_reg	renamer.h	/^	unsigned int phys_reg;$/;"	m	struct:__anon10
+pipeline_register	pipeline_register.cc	/^pipeline_register::pipeline_register() {$/;"	f	class:pipeline_register
+pipeline_register	pipeline_register.h	/^class pipeline_register {$/;"	c
+pipeline_t	pipeline.cc	/^pipeline_t::pipeline_t($/;"	f	class:pipeline_t
+pipeline_t	pipeline.h	/^class pipeline_t: public processor_t$/;"	c
+pop	debug.cc	/^db_t* debug_buffer_t::pop(debug_index_t i) {$/;"	f	class:debug_buffer_t
+pop	fetch_queue.cc	/^unsigned int fetch_queue::pop() {$/;"	f	class:fetch_queue
+pop	payload.cc	/^void payload::pop() {$/;"	f	class:payload
+pop_pc	debug.h	/^	inline	reg_t pop_pc() {$/;"	f	class:debug_buffer_t
+pop_pc_valid	debug.h	/^	inline	bool pop_pc_valid() {$/;"	f	class:debug_buffer_t
+pred	bpred_interface.h	/^	uint32_t                      	pred;$/;"	m	class:BpredPredictAutomaton
+pred_table	bpred_interface.h	/^	BpredPredictAutomaton*	pred_table;$/;"	m	class:bpred_interface
+pred_tag	payload.h	/^	unsigned int pred_tag;       $/;"	m	struct:__anon9
+proc	dcache.h	/^  pipeline_t* proc;$/;"	m	class:CacheClass
+proc	fetch_queue.h	/^  pipeline_t* proc;$/;"	m	class:fetch_queue
+proc	issue_queue.h	/^  pipeline_t* proc;$/;"	m	class:issue_queue
+proc	lsu.h	/^  pipeline_t* proc;$/;"	m	class:lsu
+proc	renamer.h	/^  pipeline_t* proc;$/;"	m	class:renamer
+proc_type	sim.h	/^  proc_type_t proc_type;$/;"	m	class:sim_t
+proc_type_t	sim.h	/^enum proc_type_t {ISA_SIM,MICRO_SIM};$/;"	g
+procs	sim.h	/^	std::vector<processor_t*> procs;$/;"	m	class:sim_t
+program_log	pipeline.h	/^  FILE* program_log;$/;"	m	class:pipeline_t
+push	fetch_queue.cc	/^void fetch_queue::push(unsigned int index) {$/;"	f	class:fetch_queue
+push	payload.cc	/^unsigned int payload::push() {$/;"	f	class:payload
+push_address_actual	debug.cc	/^void debug_buffer_t::push_address_actual( reg_t addr,$/;"	f	class:debug_buffer_t
+push_exception_actual	debug.cc	/^void debug_buffer_t::push_exception_actual(reg_t handler_pc){$/;"	f	class:debug_buffer_t
+push_instr_actual	debug.cc	/^void debug_buffer_t::push_instr_actual( insn_t       inst,$/;"	f	class:debug_buffer_t
+push_load_data_actual	debug.cc	/^void debug_buffer_t::push_load_data_actual( reg_t addr,$/;"	f	class:debug_buffer_t
+push_operand_actual	debug.cc	/^void debug_buffer_t::push_operand_actual( unsigned int n, operand_t t, reg_t value, reg_t pc) $/;"	f	class:debug_buffer_t
+push_state_actual	debug.cc	/^void debug_buffer_t::push_state_actual(state_t* a_state_ptr,bool checkpoint_state){$/;"	f	class:debug_buffer_t
+push_store_data_actual	debug.cc	/^void debug_buffer_t::push_store_data_actual( reg_t addr,$/;"	f	class:debug_buffer_t
+q	fetch_queue.h	/^	unsigned int* q;	\/\/ fetch queue$/;"	m	class:fetch_queue
+q	issue_queue.h	/^	issue_queue_entry_t* q;		\/\/ This is the issue queue.$/;"	m	class:issue_queue
+rate	stats.h	/^  double rate;$/;"	m	struct:rate
+rate	stats.h	/^typedef struct rate {$/;"	s
+rate_map	stats.h	/^  std::map<const char*, rate_t*, ltstr> rate_map;$/;"	m	class:stats_t
+rate_t	stats.h	/^} rate_t;$/;"	t	typeref:struct:rate
+read	renamer.cc	/^unsigned long long  renamer::read(unsigned int phys_reg) {$/;"	f	class:renamer
+ready	renamer.h	/^	bool* ready;$/;"	m	class:renamer
+real_lower	debug.h	/^	unsigned int	real_lower;$/;"	m	struct:__anon4
+real_upper	debug.h	/^	reg_t	        real_upper;$/;"	m	struct:__anon4
+recover_pc_ptr	debug.h	/^	inline	void recover_pc_ptr(reg_t recover_PC) {$/;"	f	class:debug_buffer_t
+recover_pc_ptr	debug.h	/^	inline	void recover_pc_ptr(reg_t recover_PC, unsigned int index) {$/;"	f	class:debug_buffer_t
+register_counter	stats.cc	/^void stats_t::register_counter(const char* name, const char* hierarchy){$/;"	f	class:stats_t
+register_rate	stats.cc	/^void stats_t::register_rate(const char* name, const char* hierarchy, const char* numerator, const char* denominator, double multiplier){$/;"	f	class:stats_t
+register_read	register_read.cc	/^void pipeline_t::register_read(unsigned int lane_number) {$/;"	f	class:pipeline_t
+regread_log	pipeline.h	/^  FILE* regread_log;$/;"	m	class:pipeline_t
+remove	issue_queue.cc	/^void issue_queue::remove(unsigned int i) {$/;"	f	class:issue_queue
+rename1	rename.cc	/^void pipeline_t::rename1() {$/;"	f	class:pipeline_t
+rename2	rename.cc	/^void pipeline_t::rename2() {$/;"	f	class:pipeline_t
+rename_log	pipeline.h	/^  FILE* rename_log;$/;"	m	class:pipeline_t
+rename_rdst	renamer.cc	/^unsigned int renamer::rename_rdst(unsigned int log_reg) {$/;"	f	class:renamer
+rename_rsrc	renamer.cc	/^unsigned int renamer::rename_rsrc(unsigned int log_reg) {$/;"	f	class:renamer
+renamer	renamer.cc	/^renamer::renamer(unsigned int n_log_regs,$/;"	f	class:renamer
+renamer	renamer.h	/^class renamer {$/;"	c
+replay_index	lsu.h	/^	int replay_index;$/;"	m	class:lsu
+reset_counters	stats.cc	/^void stats_t::reset_counters(){$/;"	f	class:stats_t
+reset_phase_counters	stats.cc	/^void stats_t::reset_phase_counters(){$/;"	f	class:stats_t
+resolve	renamer.cc	/^void renamer::resolve(unsigned int AL_index, unsigned int branch_ID, bool correct) {$/;"	f	class:renamer
+resolve	squash.cc	/^void pipeline_t::resolve(unsigned int branch_ID, bool correct) {$/;"	f	class:pipeline_t
+resolved	dcache.h	/^	int64_t   resolved;       \/* When miss will be completed.      *\/$/;"	m	class:MHSRClass
+restore	lsu.cc	/^void lsu::restore(unsigned int recover_lq_tail, bool recover_lq_tail_phase,$/;"	f	class:lsu
+retire	retire.cc	/^void pipeline_t::retire(size_t& instret) {$/;"	f	class:pipeline_t
+retire_log	pipeline.h	/^  FILE* retire_log;$/;"	m	class:pipeline_t
+retire_width	pipeline.h	/^	unsigned int retire_width;	\/\/ retire width$/;"	m	class:pipeline_t
+right	payload.h	/^	bool right;			\/\/ LWR or SWR instruction.$/;"	m	struct:__anon9
+rollback	payload.cc	/^void payload::rollback(unsigned int index) {$/;"	f	class:payload
+rr	lane.h	/^	pipeline_register rr;	\/\/ pipeline register of Register Read Stage$/;"	m	class:lane
+run	sim.cc	/^int sim_t::run()$/;"	f	class:sim_t
+run_ahead	debug.cc	/^void debug_buffer_t::run_ahead(){$/;"	f	class:debug_buffer_t
+run_fast	sim.cc	/^bool sim_t::run_fast(size_t n)$/;"	f	class:sim_t
+running	sim.cc	/^bool sim_t::running()$/;"	f	class:sim_t
+s_vpi_vecval	svdpi.h	/^} s_vpi_vecval, *p_vpi_vecval;$/;"	t	typeref:struct:vpi_vecval
+schedule	schedule.cc	/^void pipeline_t::schedule() {$/;"	f	class:pipeline_t
+sdw	payload.h	/^  sreg_t sdw;$/;"	m	union:union64_t
+sdword	debug.h	/^  sreg_t sdword; \/\/Signed double word$/;"	m	union:__anon3
+sel_iq	payload.h	/^} sel_iq;$/;"	t	typeref:enum:__anon8
+select_and_issue	issue_queue.cc	/^void issue_queue::select_and_issue(unsigned int num_lanes, lane* Execution_Lanes) {$/;"	f	class:issue_queue
+send_ipi	sim.cc	/^void sim_t::send_ipi(reg_t who)$/;"	f	class:sim_t
+sequence	payload.h	/^  uint64_t sequence;$/;"	m	struct:__anon9
+sequence	pipeline.h	/^  uint64_t sequence;$/;"	m	class:pipeline_t
+sequence	renamer.h	/^  uint64_t sequence;$/;"	m	struct:__anon10
+set_complete	renamer.cc	/^void renamer::set_complete(unsigned int AL_index) {$/;"	f	class:renamer
+set_debug	sim.cc	/^void sim_t::set_debug(bool value)$/;"	f	class:sim_t
+set_exception	renamer.cc	/^void renamer::set_exception(unsigned int AL_index, trap_t* t) {$/;"	f	class:renamer
+set_fetch_amo	pipeline.h	/^  inline void set_fetch_amo(){$/;"	f	class:pipeline_t
+set_fetch_csr	pipeline.h	/^  inline void set_fetch_csr(){$/;"	f	class:pipeline_t
+set_fetch_exception	pipeline.h	/^  inline void set_fetch_exception(){$/;"	f	class:pipeline_t
+set_histogram	sim.cc	/^void sim_t::set_histogram(bool value)$/;"	f	class:sim_t
+set_isa_sim	debug.h	/^  void set_isa_sim(sim_t* _isa_sim){ isa_sim = _isa_sim; }$/;"	f	class:debug_buffer_t
+set_lat	dcache.cc	/^CacheClass::set_lat(unsigned int lat) {$/;"	f	class:CacheClass
+set_log_files	stats.cc	/^void stats_t::set_log_files(FILE* _stats_log,FILE* _phase_log){$/;"	f	class:stats_t
+set_nconf	bpred_interface.cc	/^void bpred_interface::set_nconf(unsigned int pred_tag)$/;"	f	class:bpred_interface
+set_phase_interval	stats.cc	/^void stats_t::set_phase_interval(const char* name,uint64_t interval)$/;"	f	class:stats_t
+set_procs_checker	sim.cc	/^void sim_t::set_procs_checker(bool value)$/;"	f	class:sim_t
+set_procs_debug	sim.cc	/^void sim_t::set_procs_debug(bool value)$/;"	f	class:sim_t
+set_procs_pipe	sim.cc	/^void sim_t::set_procs_pipe(debug_buffer_t* pipe)$/;"	f	class:sim_t
+set_ready	renamer.cc	/^void renamer::set_ready(unsigned int phys_reg) {$/;"	f	class:renamer
+set_stats	lsu.h	/^  void set_stats(stats_t* _stats){this->stats = _stats;}$/;"	f	class:lsu
+sim_t	sim.cc	/^sim_t::sim_t(size_t nprocs, size_t mem_mb, const std::vector<std::string>& args, proc_type_t _proc_type)$/;"	f	class:sim_t
+sim_t	sim.h	/^class sim_t$/;"	c
+size	cache.h	/^	unsigned int size;$/;"	m	class:cache
+size	fetch_queue.h	/^	unsigned int size;	\/\/ size of fetch queue$/;"	m	class:fetch_queue
+size	issue_queue.h	/^	unsigned int size;		\/\/ Issue queue size.$/;"	m	class:issue_queue
+size	lsu.h	/^	int size;		\/\/ 1, 2, 4, or 8 bytes$/;"	m	struct:__anon7
+size	payload.h	/^	unsigned int size;		\/\/ Size of load or store (1, 2, 4, or 8 bytes).$/;"	m	struct:__anon9
+skip_till_pc	debug.cc	/^void debug_buffer_t::skip_till_pc(reg_t pc, unsigned int proc_id){$/;"	f	class:debug_buffer_t
+split	payload.cc	/^void payload::split(unsigned int index) {$/;"	f	class:payload
+split	payload.h	/^	bool split;			\/\/ Instruction is split into two.$/;"	m	struct:__anon9
+split_store	payload.h	/^	bool split_store;		$/;"	m	struct:__anon9
+sq_head	lsu.h	/^	unsigned int sq_head;$/;"	m	class:lsu
+sq_head_phase	lsu.h	/^	bool sq_head_phase;$/;"	m	class:lsu
+sq_index	lsu.h	/^	unsigned int sq_index;	\/\/ SQ index of stalled load.$/;"	m	struct:__anon7
+sq_index_phase	lsu.h	/^	bool sq_index_phase;$/;"	m	struct:__anon7
+sq_length	lsu.h	/^	unsigned int sq_length;$/;"	m	class:lsu
+sq_size	lsu.h	/^	unsigned int sq_size;$/;"	m	class:lsu
+sq_tail	lsu.h	/^	unsigned int sq_tail;$/;"	m	class:lsu
+sq_tail_phase	lsu.h	/^	bool sq_tail_phase;$/;"	m	class:lsu
+squash	issue_queue.cc	/^void issue_queue::squash(unsigned int branch_ID) {$/;"	f	class:issue_queue
+squash	renamer.cc	/^void renamer::squash(){$/;"	f	class:renamer
+squash_complete	squash.cc	/^void pipeline_t::squash_complete(reg_t jump_PC) {$/;"	f	class:pipeline_t
+stall	issue_queue.cc	/^bool issue_queue::stall(unsigned int bundle_inst) {$/;"	f	class:issue_queue
+stall	lsu.cc	/^bool lsu::stall(unsigned int bundle_load, unsigned int bundle_store) {$/;"	f	class:lsu
+stall_branch	renamer.cc	/^bool renamer::stall_branch(unsigned int bundle_branch) {$/;"	f	class:renamer
+stall_dispatch	renamer.cc	/^bool renamer::stall_dispatch(unsigned int bundle_inst) {$/;"	f	class:renamer
+stall_reg	renamer.cc	/^bool renamer::stall_reg(unsigned int bundle_dst) {$/;"	f	class:renamer
+start	debug.cc	/^void debug_buffer_t::start() {$/;"	f	class:debug_buffer_t
+stat_forward	lsu.h	/^	bool stat_forward;		\/\/ Load received value from store in LSQ.$/;"	m	struct:__anon7
+stat_load_stall_disambig	lsu.h	/^	bool stat_load_stall_disambig;	\/\/ Load stalled due to unknown store address and\/or value.$/;"	m	struct:__anon7
+stat_load_stall_miss	lsu.h	/^	bool stat_load_stall_miss;	\/\/ Load stalled due to a cache miss.$/;"	m	struct:__anon7
+stat_num_cond_miss	bpred_interface.h	/^	unsigned int stat_num_cond_miss;$/;"	m	class:bpred_interface
+stat_num_cond_pred	bpred_interface.h	/^	unsigned int stat_num_cond_pred;$/;"	m	class:bpred_interface
+stat_num_conf_corr	bpred_interface.h	/^	unsigned int stat_num_conf_corr;$/;"	m	class:bpred_interface
+stat_num_conf_ncorr	bpred_interface.h	/^	unsigned int stat_num_conf_ncorr;$/;"	m	class:bpred_interface
+stat_num_flush_RAS	bpred_interface.h	/^	unsigned int stat_num_flush_RAS;$/;"	m	class:bpred_interface
+stat_num_miss	bpred_interface.h	/^	unsigned int stat_num_miss;$/;"	m	class:bpred_interface
+stat_num_nconf_corr	bpred_interface.h	/^	unsigned int stat_num_nconf_corr;$/;"	m	class:bpred_interface
+stat_num_nconf_ncorr	bpred_interface.h	/^	unsigned int stat_num_nconf_ncorr;$/;"	m	class:bpred_interface
+stat_num_pred	bpred_interface.h	/^	unsigned int stat_num_pred;$/;"	m	class:bpred_interface
+stat_store_stall_miss	lsu.h	/^	bool stat_store_stall_miss;	\/\/ Store commit stalled due to a cache miss.$/;"	m	struct:__anon7
+state	bpred_interface.h	/^	uint32_t			state;$/;"	m	class:CTI_entry_b
+stats	lsu.h	/^  stats_t* stats;$/;"	m	class:lsu
+stats	pipeline.h	/^  stats_t* stats;$/;"	m	class:pipeline_t
+stats_log	pipeline.h	/^  FILE* stats_log;$/;"	m	class:pipeline_t
+stats_log	stats.h	/^  FILE* stats_log;$/;"	m	class:stats_t
+stats_t	stats.cc	/^stats_t::stats_t(){$/;"	f	class:stats_t
+stats_t	stats.h	/^class stats_t {$/;"	c
+steer	dispatch.cc	/^unsigned int pipeline_t::steer(fu_type fu) {$/;"	f	class:pipeline_t
+step	sim.cc	/^bool sim_t::step(size_t n)$/;"	f	class:sim_t
+step_micro	pipeline.cc	/^bool pipeline_t::step_micro(size_t n,size_t& instret)$/;"	f	class:pipeline_t
+step_till_pc	sim.cc	/^void sim_t::step_till_pc(reg_t break_pc,unsigned int proc_n)$/;"	f	class:sim_t
+stop	sim.cc	/^void sim_t::stop()$/;"	f	class:sim_t
+stop_amt	parameters.cc	/^uint64_t stop_amt                   = -1;  \/\/0xffffffffffffffff$/;"	v
+store	renamer.h	/^	bool store;$/;"	m	struct:__anon10
+store_addr	lsu.cc	/^void lsu::store_addr(cycle_t cycle,$/;"	f	class:lsu
+store_data	debug.h	/^	store_data_t    store_data;$/;"	m	struct:__anon4
+store_data_t	debug.h	/^} store_data_t;$/;"	t	typeref:union:__anon3
+store_value	lsu.cc	/^void lsu::store_value(unsigned int sq_index, reg_t value) {$/;"	f	class:lsu
+sum	histogram.h	/^	unsigned long long sum;    \/* Keeps a running sum of the sampled data.  *\/$/;"	m	class:HistogramClass
+sumSq	histogram.h	/^	unsigned long long sumSq;  \/* Keeps a running sum of the squares of the$/;"	m	class:HistogramClass
+svBit	svdpi.h	/^typedef svScalar svBit; \/* scalar *\/$/;"	t
+svBitPackedArrRef	svdpi.h	/^typedef void* svBitPackedArrRef;$/;"	t
+svBitVec32	svdpi.h	/^typedef unsigned int svBitVec32;\/* (a chunk of) packed bit array *\/$/;"	t
+svBitVecVal	svdpi.h	/^typedef uint32_t svBitVecVal;$/;"	t
+svLogic	svdpi.h	/^typedef svScalar svLogic; \/* scalar *\/$/;"	t
+svLogicPackedArrRef	svdpi.h	/^typedef void* svLogicPackedArrRef;$/;"	t
+svLogicVec32	svdpi.h	/^svLogicVec32; \/* (a chunk of) packed logic array *\/$/;"	t	typeref:struct:__anon12
+svLogicVecVal	svdpi.h	/^typedef s_vpi_vecval svLogicVecVal;$/;"	t
+svOpenArrayHandle	svdpi.h	/^XXTERN typedef void* svOpenArrayHandle;$/;"	t
+svScalar	svdpi.h	/^typedef uint8_t svScalar;$/;"	t
+svScope	svdpi.h	/^XXTERN typedef void* svScope;$/;"	t
+sv_0	svdpi.h	69;"	d
+sv_1	svdpi.h	70;"	d
+sv_x	svdpi.h	72;"	d
+sv_z	svdpi.h	71;"	d
+sw	payload.h	/^	sword_t sw[2];$/;"	m	union:union64_t
+tag	bpred_interface.h	/^	uint32_t			tag;$/;"	m	class:BpredPredictAutomaton
+tag	cache.h	/^		reg_t tag;$/;"	m	struct:cache::__anon1
+tail	debug.h	/^	debug_index_t tail;$/;"	m	class:debug_buffer_t
+tail	fetch_queue.h	/^	unsigned int tail;	\/\/ tail pointer$/;"	m	class:fetch_queue
+tail	payload.h	/^	unsigned int tail;$/;"	m	class:payload
+take_trap	pipeline.cc	/^reg_t pipeline_t::take_trap(trap_t& t, reg_t epc)$/;"	f	class:pipeline_t
+taken	bpred_interface.h	/^	bool			taken;$/;"	m	class:CTI_entry_b
+target	bpred_interface.h	/^	uint32_t			target;$/;"	m	class:CTI_entry_b
+trap	renamer.h	/^  trap_t* trap; \/\/If there was an exception during execution, the trap is stored here$/;"	m	struct:__anon10
+uint32_t	svdpi.h	/^typedef unsigned __int32 uint32_t;$/;"	t
+uint64_t	svdpi.h	/^typedef unsigned __int64 uint64_t;$/;"	t
+uint8_t	svdpi.h	/^typedef unsigned __int8 uint8_t;$/;"	t
+union64_t	payload.h	/^union union64_t {$/;"	u
+update	bpred_interface.cc	/^void bpred_interface::update()$/;"	f	class:bpred_interface
+update	bpred_interface.h	/^	void update(uint32_t outcome)$/;"	f	class:BpredPredictAutomaton
+update_counter	stats.cc	/^void stats_t::update_counter(const char* name,unsigned int inc){$/;"	f	class:stats_t
+update_global_history	bpred_interface.cc	/^unsigned int bpred_interface::update_global_history(unsigned int ghistory,$/;"	f	class:bpred_interface
+update_histogram	pipeline.cc	/^inline void pipeline_t::update_histogram(size_t pc)$/;"	f	class:pipeline_t
+update_predictions	bpred_interface.cc	/^void bpred_interface::update_predictions(bool fm)		\/\/ "FM"$/;"	f	class:bpred_interface
+update_rates	stats.cc	/^void stats_t::update_rates(){$/;"	f	class:stats_t
+update_timer	pipeline.cc	/^static void update_timer(state_t* state, size_t instret)$/;"	f	file:
+upper	payload.h	/^	bool upper;			$/;"	m	struct:__anon9
+use_BTB	bpred_interface.h	/^	bool			use_BTB;$/;"	m	class:CTI_entry_b
+use_global_history	bpred_interface.h	/^	bool			use_global_history;$/;"	m	class:CTI_entry_b
+valid	debug.h	/^  bool          valid; \/\/ Already pushed$/;"	m	struct:__anon2
+valid	issue_queue.h	/^	bool valid;$/;"	m	struct:__anon6
+valid	lsu.h	/^	bool valid;		\/\/ this entry holds an active load or store$/;"	m	struct:__anon7
+valid	pipeline_register.h	/^	bool valid;				              \/\/ valid instruction$/;"	m	class:pipeline_register
+value	debug.h	/^	reg_t         value; \/\/ destination value$/;"	m	struct:__anon2
+value	lsu.h	/^	reg_t value;	\/\/ value (up to two words)$/;"	m	struct:__anon7
+value_avail	lsu.h	/^	bool value_avail;	\/\/ value is available$/;"	m	struct:__anon7
+verify_pred	bpred_interface.cc	/^void bpred_interface::verify_pred(unsigned int pred_tag, unsigned int next_pc,$/;"	f	class:bpred_interface
+vpi_vecval	svdpi.h	/^typedef struct vpi_vecval {$/;"	s
+w	payload.h	/^	word_t w[2];$/;"	m	union:union64_t
+wait_for_trap	pipeline.h	/^	bool wait_for_trap;		\/\/ Needed to override perfect branch prediction after fetching a syscall.$/;"	m	class:pipeline_t
+wakeup	issue_queue.cc	/^void issue_queue::wakeup(unsigned int tag) {$/;"	f	class:issue_queue
+wb	lane.h	/^	pipeline_register wb;	\/\/ pipeline register of Writeback Stage$/;"	m	class:lane
+wback_log	pipeline.h	/^  FILE* wback_log;$/;"	m	class:pipeline_t
+why_vector	debug.h	/^	unsigned int why_vector;$/;"	m	struct:__anon4
+words	debug.h	/^	word_t words[2];$/;"	m	union:__anon3
+write	renamer.cc	/^void renamer::write(unsigned int phys_reg, unsigned long long value) {$/;"	f	class:renamer
+writeback	writeback.cc	/^void pipeline_t::writeback(unsigned int lane_number) {$/;"	f	class:pipeline_t
+~BpredPredictAutomaton	bpred_interface.h	/^	~BpredPredictAutomaton()$/;"	f	class:BpredPredictAutomaton
+~CacheClass	dcache.cc	/^CacheClass::~CacheClass()$/;"	f	class:CacheClass
+~HistogramClass	histogram.cc	/^HistogramClass::~HistogramClass()$/;"	f	class:HistogramClass
+~RAS_node_b	bpred_interface.h	/^	~RAS_node_b()$/;"	f	class:RAS_node_b
+~bpred_interface	bpred_interface.cc	/^bpred_interface::~bpred_interface()$/;"	f	class:bpred_interface
+~cache	cache.h	/^	~cache() {$/;"	f	class:cache
+~debug_buffer_t	debug.cc	/^debug_buffer_t::~debug_buffer_t() {$/;"	f	class:debug_buffer_t
+~lsu	lsu.cc	/^lsu::~lsu(){$/;"	f	class:lsu
+~pipeline_t	pipeline.cc	/^pipeline_t::~pipeline_t()$/;"	f	class:pipeline_t
+~renamer	renamer.cc	/^renamer::~renamer() {$/;"	f	class:renamer
+~sim_t	sim.cc	/^sim_t::~sim_t()$/;"	f	class:sim_t
+~stats_t	stats.h	/^  ~stats_t(){}$/;"	f	class:stats_t

@@ -1,0 +1,58 @@
+get_insn_list = $(shell grep ^DECLARE_INSN $(1) | sed 's/DECLARE_INSN(\(.*\),.*,.*)/\1/')
+get_opcode = $(shell grep ^DECLARE_INSN.*\\\<$(2)\\\> $(1) | sed 's/DECLARE_INSN(.*,\(.*\),.*)/\1/')
+
+isa_sim_dpi_subproject_deps = \
+	softfloat_dpi \
+
+isa_sim_dpi_install_prog_srcs = \
+
+isa_sim_dpi_hdrs = \
+	htif.h \
+	common.h \
+	decode.h \
+	processor.h	\
+	mmu.h \
+	trap.h \
+	encoding.h \
+	cachesim.h \
+	memtracer.h \
+	extension.h \
+	rocc.h \
+	insn_template.h \
+	mulhi.h \
+
+isa_sim_dpi_precompiled_hdrs = \
+	insn_template.h \
+
+isa_sim_dpi_srcs = \
+	htif.cc \
+	interactive.cc \
+	trap.cc \
+	processor.cc	\
+	cachesim.cc \
+	mmu.cc \
+	disasm.cc \
+	extension.cc \
+	rocc.cc \
+	regnames.cc \
+	$(isa_sim_dpi_gen_srcs) \
+
+isa_sim_dpi_test_srcs =
+
+isa_sim_dpi_gen_hdrs = \
+  icache.h \
+
+isa_sim_dpi_gen_srcs = \
+	$(addsuffix .cc, $(call get_insn_list,$(src_dir)/isa_sim_dpi/encoding.h))
+
+icache_entries := `grep "ICACHE_ENTRIES =" $(src_dir)/isa_sim_dpi/mmu.h | sed 's/.* = \(.*\);/\1/'`
+
+icache.h: mmu.h
+	$(src_dir)/isa_sim_dpi/gen_icache $(icache_entries) > $@.tmp
+	mv $@.tmp $@
+
+$(isa_sim_dpi_gen_srcs): %.cc: insns/%.h insn_template.cc
+	sed 's/NAME/$(subst .cc,,$@)/' $(src_dir)/isa_sim_dpi/insn_template.cc | sed 's/OPCODE/$(call get_opcode,$(src_dir)/isa_sim_dpi/encoding.h,$(subst .cc,,$@))/' > $@
+
+isa_sim_dpi_junk = \
+	$(isa_sim_dpi_gen_srcs) \

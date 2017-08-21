@@ -1,0 +1,26 @@
+dpi_sim_subproject_deps	=	\
+	softfloat_dpi \
+	isa_sim_dpi \
+
+dpi_sim_hdrs	=	\
+	./parameters.h	\
+	./fu.h	\
+	./payload.h	\
+	./sim.h	\
+	./dpisim.h	\
+	./debug.h	\
+	./histogram.h	\
+	./stats.h	\
+	./svdpi.h	\
+
+dpi_sim_srcs	=	\
+	./parameters.cc	\
+	./payload.cc	\
+	./histogram.cc	\
+	./dpisim.cc	\
+	./sim.cc\
+	./debug.cc	\
+	./stats.cc	\
+	./checker.cc \
+
+

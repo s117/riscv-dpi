@@ -1,0 +1,14 @@
+riscv_dpi_subproject_deps = \
+	softfloat_dpi \
+	isa_sim_dpi \
+	dpi_sim \
+
+riscv_dpi_install_prog_srcs = \
+	dpis.cc
+
+riscv_dpi_hdrs = \
+
+riscv_dpi_srcs = \
+	extensions.cc	\
+	riscv_dpi.cc	\
+	read_config.cc \
