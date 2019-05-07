@@ -306,17 +306,47 @@ bool sim_t::create_checkpoint()
 
 bool sim_t::restore_checkpoint(std::string restore_file)
 {
+/*-----Changes: Mohit (Modified restore checkpoint to support '.gz' type checkpoint format)-------*/
+// Refer to 721sim for create and restore checkpoint logic
+  //bool htif_return = true;
+
+  //fprintf(stderr,"Trying to restore checkpoint from %s.*\n",restore_file.c_str());
+  //// This tick will restore the checkpoint.
+  //  htif_return = htif->restore_checkpoint(restore_file+".syscall");
+  //restore_memory_checkpoint(restore_file+".memory");
+  //restore_proc_checkpoint(restore_file+".proc");
+
+  //fprintf(stderr,"Done restoring checkpoint from %s.*\n",restore_file.c_str());
+
+  //return htif_return;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
   bool htif_return = true;
 
-  fprintf(stderr,"Trying to restore checkpoint from %s.*\n",restore_file.c_str());
-  // This tick will restore the checkpoint.
-	htif_return = htif->restore_checkpoint(restore_file+".syscall");
-  restore_memory_checkpoint(restore_file+".memory");
-  restore_proc_checkpoint(restore_file+".proc");
+  // Check if file name has .gz extension. If not, append .gz to the name
+  if(restore_file.substr(restore_file.find_last_of(".") + 1) != "gz") {
+    restore_file = restore_file+".gz";
+  }
 
-  fprintf(stderr,"Done restoring checkpoint from %s.*\n",restore_file.c_str());
+  //std::cerr << "Trying to restore HTIF checkpoint from " << restore_file << std::endl;
+  fflush(0);
+  restore_chkpt.open (restore_file.c_str(), std::ios::in | std::ios::binary);
+  if ( ! restore_chkpt.good()) {
+    std::cerr << "ERROR: Opening file `" << restore_file << "' failed.\n";
+	  return false;
+  }
+
+  // This tick will restore the checkpoint.
+	htif_return = htif->restore_checkpoint(restore_chkpt);
+  std::cerr << "Done restoring HTIF checkpoint from " << restore_file << std::endl;
+
+  //std::cerr << "Trying to restore mem/reg HTIF checkpoint from " << restore_file << std::endl;
+  restore_memory_checkpoint(restore_chkpt);
+  restore_proc_checkpoint(restore_chkpt);
+  restore_chkpt.close();
+  std::cerr << "Done restoring mem/reg checkpoint from " << restore_file << std::endl;
 
   return htif_return;
+
 }
 
 void sim_t::create_memory_checkpoint(std::string memory_file)
@@ -351,51 +381,69 @@ void sim_t::create_proc_checkpoint(std::string proc_file)
   procs[current_proc]->get_state()->dump(stderr);
 }
 
-void sim_t::restore_memory_checkpoint(std::string memory_file)
+//void sim_t::restore_memory_checkpoint(std::string memory_file)
+void sim_t::restore_memory_checkpoint(std::istream& memory_chkpt)
 {
-  fprintf(stderr,"Trying to restore memory state from %s\n",memory_file.c_str());
-  fflush(0);
-  std::fstream memory_chkpt;
-  memory_chkpt.open (memory_file, std::ios::in | std::ios::binary);
-  //uint64_t buf[1024];
-  //for (size_t i = 0; i < 0x80000; i++){
-  //  memory_chkpt.read((char *)&buf[0],1024*8);
-  //  for (size_t j = 0; i < 1024; i++){
-  //    debug_mmu->store_uint64(((i*1024)+(j*8)),buf[j]);
-  //  }
-  //}
+/*-----Changes: Mohit (Modified to support memory checkpoint restore for '.gz' file)-------*/
+// Refer to 721sim for memory checkpoint restore                                            //fprintf(stderr,"Trying to restore memory state from %s\n",memory_file.c_str());
+  //fflush(0);
+  //std::fstream memory_chkpt;
+  //memory_chkpt.open (memory_file, std::ios::in | std::ios::binary);
+  ////uint64_t buf[1024];
+  ////for (size_t i = 0; i < 0x80000; i++){
+  ////  memory_chkpt.read((char *)&buf[0],1024*8);
+  ////  for (size_t j = 0; i < 1024; i++){
+  ////    debug_mmu->store_uint64(((i*1024)+(j*8)),buf[j]);
+  ////  }
+  ////}
+  //uint64_t signature;
+  //memory_chkpt.read((char*)&signature,8);
+  //assert(signature == 0xbaadbeefdeadbeef);
+  //memory_chkpt.read(mem,memsz);
+  //memory_chkpt.close();
+  //fprintf(stderr,"Done restoring memory state from %s\n",memory_file.c_str());
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
   uint64_t signature;
+  uint64_t chkpt_memsz;
   memory_chkpt.read((char*)&signature,8);
   assert(signature == 0xbaadbeefdeadbeef);
+  // Check that the checkpointed memory size the current simulator memory size are same
+  memory_chkpt.read((char*)&chkpt_memsz,sizeof(chkpt_memsz));
+  assert(memsz == chkpt_memsz);
   memory_chkpt.read(mem,memsz);
-  memory_chkpt.close();
-  fprintf(stderr,"Done restoring memory state from %s\n",memory_file.c_str());
 }
 
-void sim_t::restore_proc_checkpoint(std::string proc_file)
+//void sim_t::restore_proc_checkpoint(std::string proc_file)
+void sim_t::restore_proc_checkpoint(std::istream& proc_chkpt)
 {
-  fprintf(stderr,"Trying to restore proc state from %s\n",proc_file.c_str());
-  fflush(0);
-  std::fstream proc_chkpt;
-  proc_chkpt.open (proc_file, std::ios::in | std::ios::binary);
+/*-----Changes: Mohit (Modified processor checkpoint restore to support '.gz' type checkpoint format)-------*/
+  //fflush(0);
+  //std::fstream proc_chkpt;
+  //proc_chkpt.open (proc_file, std::ios::in | std::ios::binary);
+  //state_t *state = procs[0]->get_state();
+  //uint64_t signature;
+  //proc_chkpt.read((char*)&signature,8);
+  //assert(signature = 0xdeadbeefbaadbeef);
+  //proc_chkpt.read((char *)state,sizeof(state_t));
+  //proc_chkpt.close();
+
+  ////// Copy registers from fast skip state to pipeline register file.
+  ////// Also reset the AMT.
+  ////if(proc_type == DPI_SIM){
+  ////  ifprintf(logging_on,stderr,"Copying state after restoring checkpoint\n");
+  ////  ((dpisim_t*)procs[current_proc])->copy_state_to_micro();
+  ////}
+
+  //fprintf(stderr,"State for %s:\n",proc_type == DPI_SIM ? "dpi_sim" : "isa_sim");
+  //procs[current_proc]->get_state()->dump(stderr);
+
+  //fprintf(stderr,"Done restoring proc state from %s\n",proc_file.c_str());
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
   state_t *state = procs[0]->get_state();
   uint64_t signature;
   proc_chkpt.read((char*)&signature,8);
   assert(signature = 0xdeadbeefbaadbeef);
   proc_chkpt.read((char *)state,sizeof(state_t));
-  proc_chkpt.close();
-
-  //// Copy registers from fast skip state to pipeline register file.
-  //// Also reset the AMT.
-  //if(proc_type == DPI_SIM){
-  //  ifprintf(logging_on,stderr,"Copying state after restoring checkpoint\n");
-  //  ((dpisim_t*)procs[current_proc])->copy_state_to_micro();
-  //}
-
-  fprintf(stderr,"State for %s:\n",proc_type == DPI_SIM ? "dpi_sim" : "isa_sim");
-  procs[current_proc]->get_state()->dump(stderr);
-
-  fprintf(stderr,"Done restoring proc state from %s\n",proc_file.c_str());
 }
 
 void sim_t::stop()

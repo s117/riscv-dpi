@@ -8,6 +8,8 @@
 #include <vector>
 #include <string>
 #include <memory>
+#include <fstream> //Changes: Mohit (library support for reading checkpoint)
+#include <gzstream.h> //Changes: Mohit (library support for restoring checkpoint)
 //#include "dpisim.h"
 #include "mmu.h"
 
@@ -106,10 +108,15 @@ private:
 	reg_t get_pc(const std::vector<std::string>& args);
 	reg_t get_tohost(const std::vector<std::string>& args);
 
+  ogzstream proc_chkpt; //Changes: Mohit (Checkpoint var)
+  igzstream restore_chkpt; //Changes: Mohit (Checkpoint var)
   void create_memory_checkpoint(std::string memory_file);
-  void restore_memory_checkpoint(std::string memory_file);
+  //void restore_memory_checkpoint(std::string memory_file);
   void create_proc_checkpoint(std::string proc_file);
-  void restore_proc_checkpoint(std::string proc_file);
+  //void restore_proc_checkpoint(std::string proc_file);
+  
+  void restore_memory_checkpoint(std::istream& memory_chkpt); //Changes: Mohit (Modified function for restoring memory checkpoint)
+  void restore_proc_checkpoint(std::istream& proc_chkpt); //Changes: Mohit (Modified function for restoring processor checkpoint)
 
   void flush_caches();
 

@@ -130,7 +130,7 @@ static void set_lane_matrix(const char* config)
 /* exit when this becomes non-zero */
 //int sim_exit_now = FALSE;
 // Should be global variables for access from all DPI functions
-debug_buffer_t* pipe;
+debug_buffer_t* Pipe;
 sim_t*  s_isa;
 sim_t*  s_micro;
 
@@ -219,12 +219,12 @@ int main(int argc, char** argv)
 
   #ifdef RISCV_MICRO_CHECKER
     s_isa = new sim_t(nprocs, mem_mb, htif_args, ISA_SIM);
-    pipe = new debug_buffer_t(PIPE_QUEUE_SIZE);
+    Pipe = new debug_buffer_t(PIPE_QUEUE_SIZE);
 
-    pipe->set_isa_sim(s_isa);
+    Pipe->set_isa_sim(s_isa);
 
-    s_isa->set_procs_pipe(pipe);
-    s_micro->set_procs_pipe(pipe);
+    s_isa->set_procs_pipe(Pipe);
+    s_micro->set_procs_pipe(Pipe);
   #endif
 
   int i, exit_code, exec_index;
@@ -347,7 +347,7 @@ int main(int argc, char** argv)
 
 
     // Fill the debug buffer
-    pipe->run_ahead();
+    Pipe->run_ahead();
   #endif
 
 
