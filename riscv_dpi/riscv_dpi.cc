@@ -43,7 +43,7 @@ time_t start_time;
 extern void read_config_from_file(int& nargs, char*** args, FILE** fp_job);
 
 // Should be global variables for access from all DPI functions
-static debug_buffer_t* pipe;
+static debug_buffer_t* Pipe;
 //debug_buffer_t pipe(128);
 static sim_t*  s_isa;
 static sim_t*  s_dpi;
@@ -54,6 +54,9 @@ static bool histogram = false;
 static size_t nprocs = 1;
 static size_t mem_mb = 0;
 static size_t skip_amt = 0;
+static bool skip_enable = false; //Changes: Mohit (Initialize to skip false)
+static bool restore_checkpoint = false; //Changes: Mohit (Initialize to false)
+static std::string checkpoint_file = "checkpoint"; //Changes: Mohit (Initialize)
 
 extern "C" {
 
@@ -85,8 +88,9 @@ extern "C" {
     parser.option('l', 0, 1, [&](const char* s){logging_on_at = atoll(s);});
     parser.option('p', 0, 1, [&](const char* s){nprocs = atoi(s);});
     parser.option('m', 0, 1, [&](const char* s){mem_mb = atoi(s);});
-    parser.option('s', 0, 1, [&](const char* s){skip_amt = atoll(s);});
+    parser.option('s', 0, 1, [&](const char* s){skip_amt = atoll(s); skip_enable = true;}); //Changes: Mohit
     parser.option('e', 0, 1, [&](const char* s){stop_amt = atoll(s);});
+    parser.option('c', 0, 1, [&](const char* s){checkpoint_file = s; restore_checkpoint = true;}); //Changes: Mohit (Checkpoint file argument)
     parser.option(0, "ic", 1, [&](const char* s){ic.reset(new icache_sim_t(s));});
     parser.option(0, "dc", 1, [&](const char* s){dc.reset(new dcache_sim_t(s));});
     parser.option(0, "l2", 1, [&](const char* s){l2.reset(cache_sim_t::construct(s, "L2$"));});
@@ -139,13 +143,13 @@ extern "C" {
       s_isa = new sim_t(nprocs, mem_mb, htif_args, ISA_SIM);
       ifprintf(logging_on,stderr,"Instantiated ISA simulator\n");
 
-      pipe = new debug_buffer_t(PIPE_QUEUE_SIZE);
+      Pipe = new debug_buffer_t(PIPE_QUEUE_SIZE);
       ifprintf(logging_on,stderr,"Instantiated PIPE\n");
   
-      pipe->set_isa_sim(s_isa);
+      Pipe->set_isa_sim(s_isa);
   
-      s_isa->set_procs_pipe(pipe);
-      s_dpi->set_procs_pipe(pipe);
+      s_isa->set_procs_pipe(Pipe);
+      s_dpi->set_procs_pipe(Pipe);
     #endif
   
     int i, exit_code, exec_index;
@@ -181,25 +185,39 @@ extern "C" {
     #ifdef RISCV_MICRO_CHECKER
       ifprintf(logging_on,stderr,"Booting ISA simulators\n");
       s_isa->boot();
-  
-      // If skip amount is provided, fast skip in the ISA sim
-      ifprintf(logging_on,stderr, "Fast skipping Spike for %lu instructions\n",skip_amt);
-      htif_code = s_isa->run_fast(skip_amt);
+      if (restore_checkpoint)	//Changes: Mohit (If checkpoint-restore is enabled restore of ISA-sim)
+      {
+          fprintf(stderr, "Restoring checkpoint from %s\n",checkpoint_file.c_str());
+          s_isa->restore_checkpoint(checkpoint_file);
+      }
+      else if (skip_enable)
+      {
+          // If skip amount is provided, fast skip in the ISA sim
+          ifprintf(logging_on,stderr, "Fast skipping Spike for %lu instructions\n",skip_amt);
+          htif_code = s_isa->run_fast(skip_amt);
+      }
   
       // Fill the debug buffer
-      htif_code = pipe->run_ahead();
+      htif_code = Pipe->run_ahead();
     #endif
   
   
     // Boot the DPI SIM
     s_dpi->boot();
-  
-    // Runs Micors
-    ifprintf(logging_on,stderr, "Fast skipping DPI SIM for %lu instructions\n",skip_amt);
-    htif_code = s_dpi->run_fast(skip_amt);
-    // Stop simulation if HTIF returns non-zero code
-    if(!htif_code){
-      ifprintf(logging_on,stderr, "Simulation finished during initialization\n");
+    if (restore_checkpoint) //Changes: Mohit (If checkpoint-restore is enabled restore of DPI-sim)
+    {
+        fprintf(stderr, "Restoring checkpoint from %s\n",checkpoint_file.c_str());
+        s_dpi->restore_checkpoint(checkpoint_file);
+    }
+    else if (skip_enable)
+    {
+        // Runs Micors
+        ifprintf(logging_on,stderr, "Fast skipping DPI SIM for %lu instructions\n",skip_amt);
+        htif_code = s_dpi->run_fast(skip_amt);
+        // Stop simulation if HTIF returns non-zero code
+        if(!htif_code){
+            ifprintf(logging_on,stderr, "Simulation finished during initialization\n");
+        }
     }
     // Check if simulation has already completed
     if(!s_dpi->running()){
@@ -434,8 +452,8 @@ extern "C" {
       // Get pointer to the corresponding instruction in the functional simulator.
       // This enables checking results of the pipeline simulator.
       // arch_pc keeps track of the current architectural pc
-	    debug_index_t db_index = pipe->first(arch_pc);
-	    actual = pipe->pop(db_index);
+	    debug_index_t db_index = Pipe->first(arch_pc);
+	    actual = Pipe->pop(db_index);
 	    arch_pc = actual->a_next_pc;
       
     //printf("I am in checkInstruction\n");
@@ -484,7 +502,7 @@ extern "C" {
 
       dpisim_t* dpi_sim = ((dpisim_t*)(s_dpi->get_core(0)));
       if(!check_passed)
-        pipe->dump(dpi_sim, actual, stderr);
+        Pipe->dump(dpi_sim, actual, stderr);
 
       check_passed = check_passed && !(dpi_sim->check_state(dpi_sim->get_state(),actual->a_state,actual));
     }

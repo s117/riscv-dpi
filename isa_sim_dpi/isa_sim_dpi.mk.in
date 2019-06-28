@@ -6,7 +6,9 @@ isa_sim_dpi_subproject_deps = \
 
 isa_sim_dpi_install_prog_srcs = \
 
+# Added gzstream.h in hdrs
 isa_sim_dpi_hdrs = \
+	gzstream.h \
 	htif.h \
 	common.h \
 	decode.h \
@@ -24,7 +26,9 @@ isa_sim_dpi_hdrs = \
 isa_sim_dpi_precompiled_hdrs = \
 	insn_template.h \
 
+# Added gzstream.cc in src files
 isa_sim_dpi_srcs = \
+	gzstream.cc \
 	htif.cc \
 	interactive.cc \
 	trap.cc \

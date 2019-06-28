@@ -230,13 +230,83 @@ void htif_isasim_t::setup_replay_state(replay_pkt_t *hdr)
   }
 }
 
-bool htif_isasim_t::restore_checkpoint(std::string restore_file)
+//bool htif_isasim_t::restore_checkpoint(std::string restore_file)
+bool htif_isasim_t::restore_checkpoint(std::istream& restore)
 {
+// Changes: Mohit (MODIFIED Htif checkpoint restore implementation)
+// Refer to 721sim
+  //if (done())
+  //  return false;
+
+  //if(reset){
+  //  fprintf(stderr,"****Initializing the processor system****\n");
+  //}
+
+  //// If reset is set as true, which it is during initialization, the HTIF host module sends a bunch
+  //// of packets to initialize memory and processor state. Keep stepping the HTIF for init sequence 
+  //// to complete before returning control to the caller. The HTIF host module sets reset to low once 
+  //// the init sequence is complete.
+  //// If reset is low (normal operation) tick only once to complete a single pending transaction
+  ////do tick_once(); while (reset);
+
+  //fprintf(stderr,"Trying to restore htif state from %s\n",restore_file.c_str());
+  //std::ifstream restore(restore_file.c_str());
+
+  //FILE* restore_log = fopen("restore.htif","w");
+
+  //std::string token1;
+  //reg_t token2, token3;
+  //replay_pkt_t pkt;
+  //
+  //while(restore.good())
+  //{
+  //  restore >> token1 >> token2 >> token3;
+  //  fprintf(restore_log,"Reading line: %s %ld %ld\n",token1.c_str(),token2,token3);
+  //  if(!token1.compare("READ_MEM"))
+  //  {
+
+  //    fprintf(restore_log,"In READ_MEM\n");
+  //    // Create the data packet
+  //    pkt.command = READ_MEM;
+  //    pkt.addr = token2;
+  //    pkt.data_size = token3;
+  //    for(unsigned int i=0; i < token3; i++)
+  //      restore >> pkt.data[i];
+  //  } 
+  //  else if(!token1.compare("MOD_SCR"))
+  //  {
+  //    fprintf(restore_log,"In MOD_SCR\n");
+  //    // Update packet with SCR values
+  //    pkt.command = MOD_SCR;
+  //    pkt.coreid = token2;
+  //    pkt.regno = token3;
+  //    restore >> pkt.old_regval;
+  //    restore >> pkt.new_regval;
+  //  } 
+  //  else
+  //  {
+  //    //Read in the rest of the line so that correct token is read in the next iteration
+  //    std::string dummy_line;
+  //    std::getline(restore,dummy_line); 
+  //    // Must tick to maintain the sequence of HTIF operations
+  //    tick_once();
+  //    continue;
+  //  }
+  //  // Setup the system state and the tick HTIF once
+  //  setup_replay_state(&pkt);
+  //  tick_once();
+  //}
+
+  //fprintf(stderr,"Done restoring htif state from %s\n",restore_file.c_str());
+  //fclose(restore_log);
+
+  //return true;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
   if (done())
     return false;
 
   if(reset){
-    fprintf(stderr,"****Initializing the processor system****\n");
+    ifprintf(logging_on,stderr,"****Initializing the processor system****\n");
   }
 
   // If reset is set as true, which it is during initialization, the HTIF host module sends a bunch
@@ -245,9 +315,6 @@ bool htif_isasim_t::restore_checkpoint(std::string restore_file)
   // the init sequence is complete.
   // If reset is low (normal operation) tick only once to complete a single pending transaction
   //do tick_once(); while (reset);
-
-  fprintf(stderr,"Trying to restore htif state from %s\n",restore_file.c_str());
-  std::ifstream restore(restore_file.c_str());
 
   FILE* restore_log = fopen("restore.htif","w");
 
@@ -280,6 +347,17 @@ bool htif_isasim_t::restore_checkpoint(std::string restore_file)
       restore >> pkt.old_regval;
       restore >> pkt.new_regval;
     } 
+    else if(!token1.compare("END_HTIF_CHECKPOINT"))
+    {
+      // HTIF checkpoint restore complete
+      //fprintf(stderr,"Done restoring HTIF state\n");
+      //Read in the rest of the line so that correct token is read in the next iteration
+      std::string dummy_line;
+      std::getline(restore,dummy_line); 
+      // Must tick to maintain the sequence of HTIF operations
+      tick_once();
+      break;
+    }
     else
     {
       //Read in the rest of the line so that correct token is read in the next iteration
@@ -294,10 +372,9 @@ bool htif_isasim_t::restore_checkpoint(std::string restore_file)
     tick_once();
   }
 
-  fprintf(stderr,"Done restoring htif state from %s\n",restore_file.c_str());
   fclose(restore_log);
 
-  return true;
+  return true;    
 
 }
 

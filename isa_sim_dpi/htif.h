@@ -4,6 +4,7 @@
 #define _HTIF_H
 
 #include <fesvr/htif_pthread.h>
+#include <fstream> //Changes: Mohit (library support for reading checkpoint)
 
 class sim_t;
 struct packet;
@@ -43,7 +44,8 @@ public:
   ~htif_isasim_t();
   bool tick();
   bool done();
-  bool restore_checkpoint(std::string restore_file);
+  //bool restore_checkpoint(std::string restore_file);
+  bool restore_checkpoint(std::istream& restore); //Changes: Mohit (Modified HTIF checkpoint restore to read from '.gz' file format)
   void start_checkpointing(std::string checkpoint_file);
   void stop_checkpointing();
 
