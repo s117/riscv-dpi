@@ -21,7 +21,7 @@
 #include <cstring>
 #include <map>
 #include <cstdio>
-
+#include <string>
 
 // Statistics related variables and funcions
 
