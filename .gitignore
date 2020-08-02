@@ -1,0 +1,10 @@
+build*
+*.gch
+.*.swp
+autom4te.cache/
+config.h.in~
+config.log
+.autotools
+.cproject
+.project
+.settings
