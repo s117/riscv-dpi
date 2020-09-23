@@ -4054,7 +4054,7 @@ if ${ac_cv_lib_fesvr_libfesvr_is_present+:} false; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-lfesvr -pthread -lz $LIBS"
+LIBS="-lfesvr -pthread $LIBS"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -4089,7 +4089,7 @@ if test "x$ac_cv_lib_fesvr_libfesvr_is_present" = xyes; then :
 #define HAVE_LIBFESVR 1
 _ACEOF
 
-  LIBS="-lfesvr -lz $LIBS"
+  LIBS="-lfesvr $LIBS"
 
 else
   as_fn_error $? "libfesvr is required" "$LINENO" 5
@@ -4103,7 +4103,7 @@ if ${ac_cv_lib_pthread_pthread_create+:} false; then :
   $as_echo_n "(cached) " >&6
 else
   ac_check_lib_save_LIBS=$LIBS
-LIBS="-lpthread  -lz $LIBS"
+LIBS="-lpthread  $LIBS"
 cat confdefs.h - <<_ACEOF >conftest.$ac_ext
 /* end confdefs.h.  */
 
@@ -4138,10 +4138,57 @@ if test "x$ac_cv_lib_pthread_pthread_create" = xyes; then :
 #define HAVE_LIBPTHREAD 1
 _ACEOF
 
-  LIBS="-lpthread -lz $LIBS"
+  LIBS="-lpthread $LIBS"
 
 else
   as_fn_error $? "libpthread is required" "$LINENO" 5
+fi
+
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for gzread in -lz" >&5
+$as_echo_n "checking for gzread in -lz... " >&6; }
+if ${ac_cv_lib_z_gzread+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  ac_check_lib_save_LIBS=$LIBS
+LIBS="-lz  $LIBS"
+cat confdefs.h - <<_ACEOF >conftest.$ac_ext
+/* end confdefs.h.  */
+
+/* Override any GCC internal prototype to avoid an error.
+   Use char because int might match the return type of a GCC
+   builtin and then its argument prototype would still apply.  */
+#ifdef __cplusplus
+extern "C"
+#endif
+char gzread ();
+int
+main ()
+{
+return gzread ();
+  ;
+  return 0;
+}
+_ACEOF
+if ac_fn_cxx_try_link "$LINENO"; then :
+  ac_cv_lib_z_gzread=yes
+else
+  ac_cv_lib_z_gzread=no
+fi
+rm -f core conftest.err conftest.$ac_objext \
+    conftest$ac_exeext conftest.$ac_ext
+LIBS=$ac_check_lib_save_LIBS
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_z_gzread" >&5
+$as_echo "$ac_cv_lib_z_gzread" >&6; }
+if test "x$ac_cv_lib_z_gzread" = xyes; then :
+  cat >>confdefs.h <<_ACEOF
+#define HAVE_LIBZ 1
+_ACEOF
+
+  LIBS="-lz $LIBS"
+
+else
+  as_fn_error $? "libz is required" "$LINENO" 5
 fi
 
 
@@ -4222,7 +4269,6 @@ $as_echo "#define RISCV_MICRO_CHECKER /**/" >>confdefs.h
 
 
 fi
-
 
 
 
